@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Python environment
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Environments / secrets
+.env
+.env.local
+.env.*.local
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store

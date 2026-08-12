@@ -1,0 +1,4 @@
+- [ ] Create `backend/app/models/extraction.py` (Pydantic schema definitions for clinical extraction)
+- [ ] Create `backend/app/services/clinical_extractor.py` (Clinical extractor service, system prompt, validation wrapper)
+- [ ] Create `backend/tests/test_clinical_extractor.py` (Unit tests for complete note, missing values, and error propagation)
+- [ ] Run pytest to verify all tests pass

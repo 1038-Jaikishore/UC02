@@ -40,6 +40,19 @@ class MockCollection:
                 return doc
         return None
 
+    async def update_one(self, filter, update):
+        matched = 0
+        for doc in self.data:
+            if all(doc.get(k) == v for k, v in filter.items()):
+                matched = 1
+                if "$set" in update:
+                    for uk, uv in update["$set"].items():
+                        doc[uk] = uv
+        class MockUpdateResult:
+            def __init__(self, matched_count):
+                self.matched_count = matched_count
+        return MockUpdateResult(matched)
+
 class MockDB:
     def __init__(self):
         from app.api.authorizations import INITIAL_DOCS
@@ -104,5 +117,22 @@ def test_get_authorization_detail_success():
 
 def test_get_authorization_detail_not_found():
     response = client.get("/api/authorizations/PA-INVALID-ID")
+    assert response.status_code == 404
+    assert "not found" in response.json()["detail"].lower()
+
+def test_update_authorization_status_success():
+    list_response = client.get("/api/authorizations")
+    valid_id = list_response.json()[0]["id"]
+
+    payload = {"status": "APPROVED"}
+    response = client.patch(f"/api/authorizations/{valid_id}", json=payload)
+    assert response.status_code == 200
+    data = response.json()
+    assert data["id"] == valid_id
+    assert data["status"] == "APPROVED"
+
+def test_update_authorization_status_not_found():
+    payload = {"status": "APPROVED"}
+    response = client.patch("/api/authorizations/PA-INVALID-ID", json=payload)
     assert response.status_code == 404
     assert "not found" in response.json()["detail"].lower()

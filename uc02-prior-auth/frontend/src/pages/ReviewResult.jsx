@@ -20,9 +20,9 @@ export default function ReviewResult({ auth, onNavigate, onUpdateStatus }) {
   const mockRecommendation = auth.priority === 'Urgent' ? 'PEND_NURSE_REVIEW' : 'APPROVE'
   const confidence = auth.priority === 'Urgent' ? '82%' : '94%'
 
-  const handleActionSubmit = (e) => {
+  const handleActionSubmit = async (e) => {
     e.preventDefault()
-    onUpdateStatus(auth.id, decision)
+    await onUpdateStatus(auth.id, decision)
     onNavigate('dashboard')
   }
 

@@ -1,64 +1,56 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Dashboard from './pages/Dashboard'
 import NewAuthorization from './pages/NewAuthorization'
 import AuthorizationDetails from './pages/AuthorizationDetails'
 import ReviewResult from './pages/ReviewResult'
-
-const INITIAL_AUTHORIZATIONS = [
-  {
-    id: 'PA-4011',
-    patient_id: 'PT-5510',
-    diagnosis: 'Severe primary osteoarthritis of right knee',
-    diagnosis_code: 'M17.11',
-    requested_procedure: 'Total knee arthroplasty, right',
-    cpt_code: '27447',
-    clinical_notes: 'Patient is a 68-year-old female with severe right knee pain for >12 months. Unable to walk >1 block. Conservative treatments failed including physical therapy (12 weeks) and NSAIDs. X-rays reveal bone-on-bone joint space narrowing.',
-    priority: 'Standard',
-    status: 'PENDING_REVIEW',
-    created_at: '2026-08-10',
-    supporting_documents: ['xray_right_knee.pdf', 'clinical_summary_PT-5510.pdf']
-  },
-  {
-    id: 'PA-4012',
-    patient_id: 'PT-7721',
-    diagnosis: 'Spinal stenosis, lumbar region',
-    diagnosis_code: 'M48.061',
-    requested_procedure: 'Decompression laminectomy, lumbar, single segment',
-    cpt_code: '63047',
-    clinical_notes: 'Patient reports progressive bilateral leg pain and numbness aggravated by walking. MRI reveals severe central canal stenosis at L4-L5. Symptoms unresponsive to epidural steroid injections.',
-    priority: 'Urgent',
-    status: 'PENDING_REVIEW',
-    created_at: '2026-08-11',
-    supporting_documents: ['mri_lumbar_spine.pdf']
-  },
-  {
-    id: 'PA-4013',
-    patient_id: 'PT-2294',
-    diagnosis: 'Degenerative meniscus tear, medial',
-    diagnosis_code: 'S83.242A',
-    requested_procedure: 'Arthroscopic partial meniscectomy, medial',
-    cpt_code: '29881',
-    clinical_notes: 'Patient reports persistent mechanical catching and locking in the medial knee compartment for 6 months. Failed conservative management.',
-    priority: 'Standard',
-    status: 'APPROVED',
-    created_at: '2026-08-08',
-    supporting_documents: ['mri_medial_meniscus.pdf']
-  }
-]
+import {
+  fetchAuthorizations,
+  createAuthorization,
+  updateAuthorizationStatus,
+  checkHealth
+} from './services/api'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('dashboard')
-  const [authorizations, setAuthorizations] = useState(INITIAL_AUTHORIZATIONS)
+  const [authorizations, setAuthorizations] = useState([])
   const [selectedAuthId, setSelectedAuthId] = useState(null)
   const [healthStatus, setHealthStatus] = useState('Checking backend...')
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
+
+  const loadAuthorizations = async () => {
+    setLoading(true)
+    setError('')
+    try {
+      const data = await fetchAuthorizations()
+      setAuthorizations(data)
+      setHealthStatus('Connected to backend')
+    } catch (err) {
+      setError('Connection Alert: The backend server is unreachable. Check your network or make sure the API is running on port 8000.')
+      setHealthStatus('Backend Offline')
+      setAuthorizations([]) // Clear or keep empty
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  // Load list on startup
+  useEffect(() => {
+    loadAuthorizations()
+  }, [])
 
   const checkBackendHealth = async () => {
+    setHealthStatus('Checking...')
     try {
-      const res = await fetch('http://localhost:8000/health')
-      const data = await res.json()
+      const data = await checkHealth()
       setHealthStatus(`Connected! Backend status: ${data.status} (env: ${data.environment})`)
+      setError('')
+      // Reload authorizations if it succeeded
+      const listData = await fetchAuthorizations()
+      setAuthorizations(listData)
     } catch (err) {
-      setHealthStatus('Error: Backend is unreachable. Make sure it is running on port 8000.')
+      setHealthStatus('Backend Offline')
+      setError('Connection Alert: The backend server is unreachable. Make sure the API is running on port 8000.')
     }
   }
 
@@ -71,27 +63,29 @@ function App() {
   }
 
   // Add new authorization request handler
-  const handleAddAuthorization = (newAuthData) => {
-    const newId = `PA-${Math.floor(1000 + Math.random() * 9000)}`
-    const today = new Date().toISOString().split('T')[0]
-    
-    const newAuth = {
-      ...newAuthData,
-      id: newId,
-      status: 'PENDING_REVIEW',
-      created_at: today,
-      supporting_documents: ['uploaded_clinical_summary.pdf'] // Mock files attached
+  const handleAddAuthorization = async (newAuthData) => {
+    try {
+      const createdAuth = await createAuthorization(newAuthData)
+      setAuthorizations(prev => [createdAuth, ...prev])
+      setSelectedAuthId(createdAuth.id)
+      setCurrentPage('details') // Redirect straight to details page as per Phase 4 flow
+    } catch (err) {
+      // rethrow to be caught in form component
+      throw err
     }
-
-    setAuthorizations([newAuth, ...authorizations])
-    setCurrentPage('dashboard')
   }
 
   // Update request status helper
-  const handleUpdateStatus = (id, newStatus) => {
-    setAuthorizations(prev =>
-      prev.map(auth => (auth.id === id ? { ...auth, status: newStatus } : auth))
-    )
+  const handleUpdateStatus = async (id, newStatus) => {
+    try {
+      const updatedAuth = await updateAuthorizationStatus(id, newStatus)
+      setAuthorizations(prev =>
+        prev.map(auth => (auth.id === id ? updatedAuth : auth))
+      )
+    } catch (err) {
+      console.error('Failed to update status:', err)
+      alert('Failed to save reviewer decision: backend is offline.')
+    }
   }
 
   return (
@@ -113,39 +107,64 @@ function App() {
           <div className="flex items-center gap-4">
             <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
               <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse"></span>
-              Phase 1 - Reviewer UI
+              Phase 4 - Integrated
             </span>
           </div>
         </div>
       </header>
 
+      {/* Connection Warning Banner */}
+      {error && (
+        <div className="bg-rose-500/10 border-b border-rose-500/20 text-rose-400 py-3 px-4 text-xs font-semibold text-center flex items-center justify-center gap-2">
+          <svg className="w-4 h-4 animate-pulse flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+          <span>{error}</span>
+          <button 
+            onClick={loadAuthorizations} 
+            className="ml-3 px-2 py-0.5 bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 rounded font-bold cursor-pointer transition"
+          >
+            Retry
+          </button>
+        </div>
+      )}
+
       {/* Main Content */}
       <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
-        {currentPage === 'dashboard' && (
-          <Dashboard
-            authorizations={authorizations}
-            onNavigate={handleNavigate}
-            setSelectedAuthId={setSelectedAuthId}
-          />
-        )}
-        {currentPage === 'new-auth' && (
-          <NewAuthorization
-            onNavigate={handleNavigate}
-            onAddAuthorization={handleAddAuthorization}
-          />
-        )}
-        {currentPage === 'details' && (
-          <AuthorizationDetails
-            auth={activeAuth}
-            onNavigate={handleNavigate}
-          />
-        )}
-        {currentPage === 'review' && (
-          <ReviewResult
-            auth={activeAuth}
-            onNavigate={handleNavigate}
-            onUpdateStatus={handleUpdateStatus}
-          />
+        {loading ? (
+          <div className="flex flex-col items-center justify-center py-12 space-y-3">
+            <div className="w-8 h-8 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+            <span className="text-sm text-slate-400">Loading requests...</span>
+          </div>
+        ) : (
+          <>
+            {currentPage === 'dashboard' && (
+              <Dashboard
+                authorizations={authorizations}
+                onNavigate={handleNavigate}
+                setSelectedAuthId={setSelectedAuthId}
+              />
+            )}
+            {currentPage === 'new-auth' && (
+              <NewAuthorization
+                onNavigate={handleNavigate}
+                onAddAuthorization={handleAddAuthorization}
+              />
+            )}
+            {currentPage === 'details' && (
+              <AuthorizationDetails
+                auth={activeAuth}
+                onNavigate={handleNavigate}
+              />
+            )}
+            {currentPage === 'review' && (
+              <ReviewResult
+                auth={activeAuth}
+                onNavigate={handleNavigate}
+                onUpdateStatus={handleUpdateStatus}
+              />
+            )}
+          </>
         )}
       </main>
 
@@ -153,7 +172,7 @@ function App() {
       <footer className="border-t border-slate-800/80 bg-slate-950/40">
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="text-xs text-slate-500">
-            UC02 — Prior Authorization Triage & Policy Companion. Phase 1 Dummy Reviewer UI.
+            UC02 — Prior Authorization Triage & Policy Companion. Phase 4 Persistent UI.
           </div>
           <div className="flex items-center gap-3">
             <span className="text-xs text-slate-400 font-mono">{healthStatus}</span>

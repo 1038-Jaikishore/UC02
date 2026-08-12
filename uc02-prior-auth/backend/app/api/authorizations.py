@@ -109,3 +109,26 @@ async def get_authorization(authorization_id: str, db: AsyncIOMotorDatabase = De
         status_code=status.HTTP_404_NOT_FOUND,
         detail=f"Authorization request with ID '{authorization_id}' not found"
     )
+
+from pydantic import BaseModel
+class StatusUpdate(BaseModel):
+    status: str
+
+@router.patch("/{authorization_id}", response_model=AuthorizationResponse)
+async def update_authorization_status(
+    authorization_id: str,
+    payload: StatusUpdate,
+    db: AsyncIOMotorDatabase = Depends(get_database)
+):
+    res = await db.prior_authorizations.update_one(
+        {"id": authorization_id},
+        {"$set": {"status": payload.status}}
+    )
+    if res.matched_count == 0:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Authorization request with ID '{authorization_id}' not found"
+        )
+    auth = await db.prior_authorizations.find_one({"id": authorization_id})
+    return format_doc(auth)
+

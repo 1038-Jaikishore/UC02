@@ -17,7 +17,7 @@ export default function NewAuthorization({ onNavigate, onAddAuthorization }) {
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     
     // Simple frontend validations
@@ -28,8 +28,11 @@ export default function NewAuthorization({ onNavigate, onAddAuthorization }) {
 
     setError('')
     
-    // Call the parent handler to update state
-    onAddAuthorization(formData)
+    try {
+      await onAddAuthorization(formData)
+    } catch (err) {
+      setError(err.message || 'Failed to submit request. Backend may be offline.')
+    }
   }
 
   return (

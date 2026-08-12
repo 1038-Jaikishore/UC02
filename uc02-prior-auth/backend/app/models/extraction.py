@@ -1,5 +1,6 @@
 from pydantic import BaseModel, Field
 from typing import List, Optional
+from datetime import datetime
 
 class ClinicalExtraction(BaseModel):
     diagnosis: Optional[str] = Field(None, description="The primary diagnosed condition.")
@@ -11,17 +12,18 @@ class ClinicalExtraction(BaseModel):
     relevant_conditions: List[str] = Field(default_factory=list, description="Other historical/chronic conditions or risk factors.")
     unknown_fields: List[str] = Field(default_factory=list, description="List of clinical concepts or metrics that are completely missing/unspecified in the notes.")
 
+class ClinicalExtractionRecord(BaseModel):
+    authorization_id: str
+    patient_id: str
+    structured_extraction: ClinicalExtraction
+    model: str
+    timestamp: datetime
+    extraction_version: str = "1.0.0"
+    validation_status: str = "VALID"
+
     model_config = {
-        "json_schema_extra": {
-            "example": {
-                "diagnosis": "Chronic lower back pain",
-                "requested_procedure": "Lumbar MRI",
-                "symptom_duration_weeks": 8,
-                "physiotherapy_weeks": 3,
-                "medications_attempted": ["Ibuprofen"],
-                "previous_imaging": ["Lumbar X-Ray"],
-                "relevant_conditions": ["Osteoarthritis"],
-                "unknown_fields": ["Epidural injections", "Spinal surgery history"]
-            }
+        "from_attributes": True,
+        "json_encoders": {
+            datetime: lambda v: v.isoformat()
         }
     }

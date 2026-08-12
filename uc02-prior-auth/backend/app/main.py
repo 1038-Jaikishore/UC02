@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 from app.api.authorizations import router as authorizations_router
 from app.api.patients import router as patients_router
 from app.api.llm import router as llm_router
+from app.api.extractions import router as extractions_router
 from app.database.mongodb import db
 
 load_dotenv()
@@ -24,6 +25,7 @@ app.add_middleware(
 app.include_router(authorizations_router)
 app.include_router(patients_router)
 app.include_router(llm_router)
+app.include_router(extractions_router)
 
 @app.on_event("startup")
 async def startup_db_client():

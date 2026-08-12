@@ -94,6 +94,25 @@ class MockCollection:
                 self.matched_count = matched_count
         return MockUpdateResult(matched)
 
+    async def replace_one(self, filter, replacement, upsert=False):
+        matched = False
+        for i, doc in enumerate(self.data):
+            match = True
+            for k, v in filter.items():
+                if doc.get(k) != v:
+                    match = False
+            if match:
+                self.data[i] = copy.deepcopy(replacement)
+                matched = True
+                break
+        if not matched and upsert:
+            self.data.append(copy.deepcopy(replacement))
+        
+        class MockReplaceResult:
+            def __init__(self, matched_count):
+                self.matched_count = matched_count
+        return MockReplaceResult(1 if matched else 0)
+
 # Mock Patient Data
 MOCK_PATIENTS = [
     {
@@ -161,6 +180,7 @@ class MockDB:
         from app.api.authorizations import INITIAL_DOCS
         self.prior_authorizations = MockCollection(copy.deepcopy(INITIAL_DOCS))
         self.patients = MockCollection(copy.deepcopy(MOCK_PATIENTS))
+        self.clinical_extractions = MockCollection([])
 
 mock_db_instance = MockDB()
 

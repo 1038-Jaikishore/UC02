@@ -75,3 +75,30 @@ export async function checkHealth() {
   const response = await fetch(`${BASE_URL}/health`);
   return handleResponse(response);
 }
+
+/**
+ * Fetch patient profile details (Volume 2 lookups)
+ */
+export async function fetchPatientProfile(patientId) {
+  const response = await fetch(`${BASE_URL}/api/patients/${patientId}`);
+  return handleResponse(response);
+}
+
+/**
+ * Fetch cached/dynamic clinical extraction for an authorization request
+ */
+export async function fetchClinicalExtraction(authorizationId) {
+  const response = await fetch(`${BASE_URL}/api/authorizations/${authorizationId}/extraction`);
+  return handleResponse(response);
+}
+
+/**
+ * Force a fresh clinical extraction run (POST)
+ */
+export async function triggerClinicalExtraction(authorizationId) {
+  const response = await fetch(`${BASE_URL}/api/authorizations/${authorizationId}/extraction`, {
+    method: 'POST',
+  });
+  return handleResponse(response);
+}
+

@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 from app.api.authorizations import router as authorizations_router
 from app.api.patients import router as patients_router
+from app.api.llm import router as llm_router
 from app.database.mongodb import db
 
 load_dotenv()
@@ -22,6 +23,7 @@ app.add_middleware(
 # Include API routers
 app.include_router(authorizations_router)
 app.include_router(patients_router)
+app.include_router(llm_router)
 
 @app.on_event("startup")
 async def startup_db_client():

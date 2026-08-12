@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 from app.api.authorizations import router as authorizations_router
+from app.database.mongodb import db
 
 load_dotenv()
 
@@ -20,10 +21,22 @@ app.add_middleware(
 # Include API routers
 app.include_router(authorizations_router)
 
+@app.on_event("startup")
+async def startup_db_client():
+    try:
+        await db.connect_to_database()
+    except Exception as e:
+        print(f"CRITICAL ERROR: Failed to connect to MongoDB on startup: {e}")
+
+@app.on_event("shutdown")
+async def shutdown_db_client():
+    await db.close_database_connection()
+
 @app.get("/health")
 async def health_check():
+    mongo_connected = await db.is_connected()
     return {
-        "status": "healthy",
+        "status": "healthy" if mongo_connected else "degraded",
         "environment": os.getenv("ENV", "development"),
-        "mongodb_connected": False  # Handled in Phase 3
+        "mongodb_connected": mongo_connected
     }

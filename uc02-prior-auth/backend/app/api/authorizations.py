@@ -1,13 +1,15 @@
-import uuid
-from datetime import datetime
+import random
+from datetime import datetime, timezone
 from typing import List
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, HTTPException, status, Depends
+from motor.motor_asyncio import AsyncIOMotorDatabase
 from app.models.authorization import AuthorizationCreate, AuthorizationResponse
+from app.database.mongodb import get_database
 
 router = APIRouter(prefix="/api/authorizations", tags=["authorizations"])
 
-# In-memory mock database matching Phase 1 initial list
-DB_AUTHORIZATIONS = [
+# Initial mock data for pre-populating empty database
+INITIAL_DOCS = [
     {
         "id": "PA-4011",
         "patient_id": "PT-5510",
@@ -49,17 +51,28 @@ DB_AUTHORIZATIONS = [
     }
 ]
 
+def format_doc(doc) -> dict:
+    if not doc:
+        return doc
+    doc_copy = dict(doc)
+    if "_id" in doc_copy:
+        doc_copy["_id"] = str(doc_copy["_id"])
+    return doc_copy
+
+async def ensure_initial_data(db: AsyncIOMotorDatabase):
+    count = await db.prior_authorizations.count_documents({})
+    if count == 0:
+        await db.prior_authorizations.insert_many(INITIAL_DOCS)
+
 @router.post("", response_model=AuthorizationResponse, status_code=status.HTTP_201_CREATED)
-async def create_authorization(payload: AuthorizationCreate):
-    # Generate unique ID (e.g. PA-XXXX)
-    import random
+async def create_authorization(payload: AuthorizationCreate, db: AsyncIOMotorDatabase = Depends(get_database)):
+    # Generate unique ID
     new_id = f"PA-{random.randint(1000, 9999)}"
     
-    # Ensure ID uniqueness in memory
-    while any(auth["id"] == new_id for auth in DB_AUTHORIZATIONS):
+    # Ensure ID uniqueness in database
+    while await db.prior_authorizations.find_one({"id": new_id}) is not None:
         new_id = f"PA-{random.randint(1000, 9999)}"
 
-    from datetime import timezone
     today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
     new_auth = {
@@ -76,18 +89,21 @@ async def create_authorization(payload: AuthorizationCreate):
         "supporting_documents": ["uploaded_clinical_summary.pdf"]
     }
 
-    DB_AUTHORIZATIONS.insert(0, new_auth)
-    return new_auth
+    await db.prior_authorizations.insert_one(new_auth)
+    return format_doc(new_auth)
 
 @router.get("", response_model=List[AuthorizationResponse])
-async def list_authorizations():
-    return DB_AUTHORIZATIONS
+async def list_authorizations(db: AsyncIOMotorDatabase = Depends(get_database)):
+    await ensure_initial_data(db)
+    cursor = db.prior_authorizations.find().sort("created_at", -1)
+    auths = await cursor.to_list(length=100)
+    return [format_doc(auth) for auth in auths]
 
 @router.get("/{authorization_id}", response_model=AuthorizationResponse)
-async def get_authorization(authorization_id: str):
-    for auth in DB_AUTHORIZATIONS:
-        if auth["id"] == authorization_id:
-            return auth
+async def get_authorization(authorization_id: str, db: AsyncIOMotorDatabase = Depends(get_database)):
+    auth = await db.prior_authorizations.find_one({"id": authorization_id})
+    if auth:
+        return format_doc(auth)
             
     raise HTTPException(
         status_code=status.HTTP_404_NOT_FOUND,

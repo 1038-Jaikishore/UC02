@@ -1,0 +1,31 @@
+social_history_id,patient_id,smoking_status,alcohol_history,substance_history,lifestyle_factors,social_risk_factors,clinical_assessment_context
+SH0001,PAT001,Never,Occasional,None,Sedentary,Lack of Transportation,Risk-factor identified
+SH0002,PAT002,Never,Occasional,None,Moderately Active,Food Insecurity,Risk-factor identified
+SH0003,PAT003,Current,Occasional,None,Very Active,None,No significant social risks
+SH0004,PAT004,Current,Heavy,None,Very Active,Lack of Transportation,Risk-factor identified
+SH0005,PAT005,Former,Heavy,None,Moderately Active,Lack of Transportation,Risk-factor identified
+SH0006,PAT006,Never,None,None,Very Active,Lack of Transportation,Risk-factor identified
+SH0007,PAT007,Former,Moderate,None,Very Active,Housing Insecurity,Risk-factor identified
+SH0008,PAT008,Never,Heavy,None,Moderately Active,Food Insecurity,Risk-factor identified
+SH0009,PAT009,Former,None,None,Moderately Active,Housing Insecurity,Risk-factor identified
+SH0010,PAT010,Current,None,None,Sedentary,None,No significant social risks
+SH0011,PAT011,Former,None,None,Sedentary,None,No significant social risks
+SH0012,PAT012,Current,Occasional,None,Moderately Active,Lack of Transportation,Risk-factor identified
+SH0013,PAT013,Never,Occasional,None,Moderately Active,Housing Insecurity,Risk-factor identified
+SH0014,PAT014,Never,None,Disclosed,Very Active,None,No significant social risks
+SH0015,PAT015,Current,Moderate,None,Moderately Active,Housing Insecurity,Risk-factor identified
+SH0016,PAT016,Former,None,Disclosed,Very Active,Housing Insecurity,Risk-factor identified
+SH0017,PAT017,Current,None,None,Very Active,Food Insecurity,Risk-factor identified
+SH0018,PAT018,Never,Moderate,None,Very Active,Food Insecurity,Risk-factor identified
+SH0019,PAT019,Former,Occasional,None,Sedentary,None,No significant social risks
+SH0020,PAT020,Current,Moderate,Disclosed,Sedentary,Lack of Transportation,Risk-factor identified
+SH0021,PAT021,Never,None,None,Moderately Active,None,No significant social risks
+SH0022,PAT022,Former,Occasional,None,Very Active,Lack of Transportation,Risk-factor identified
+SH0023,PAT023,Current,Heavy,None,Sedentary,None,No significant social risks
+SH0024,PAT024,Former,Heavy,None,Sedentary,Lack of Transportation,Risk-factor identified
+SH0025,PAT025,Current,Moderate,None,Moderately Active,None,No significant social risks
+SH0026,PAT026,Current,None,None,Moderately Active,None,No significant social risks
+SH0027,PAT027,Never,None,None,Sedentary,Food Insecurity,Risk-factor identified
+SH0028,PAT028,Current,Occasional,None,Sedentary,Food Insecurity,Risk-factor identified
+SH0029,PAT029,Current,Heavy,None,Very Active,Lack of Transportation,Risk-factor identified
+SH0030,PAT030,Never,Heavy,Disclosed,Moderately Active,Housing Insecurity,Risk-factor identified

@@ -1,0 +1,16 @@
+provider_id,first_name,last_name,specialty,facility_name,network_status,npi,contact_number,referral_required
+PRV001,First1,Last1,Oncology,Medical Center Gamma,Out-of-Network,1928374601,555-0101,YES
+PRV002,First2,Last2,Oncology,Medical Center Beta,Out-of-Network,1928374602,555-0102,YES
+PRV003,First3,Last3,Neurology,Medical Center Alpha,Out-of-Network,1928374603,555-0103,YES
+PRV004,First4,Last4,Physical Therapy,Medical Center Gamma,Out-of-Network,1928374604,555-0104,YES
+PRV005,First5,Last5,Orthopedics,Medical Center Alpha,Out-of-Network,1928374605,555-0105,YES
+PRV006,First6,Last6,Oncology,Medical Center Gamma,In-Network,1928374606,555-0106,YES
+PRV007,First7,Last7,General Practice,Medical Center Alpha,Out-of-Network,1928374607,555-0107,NO
+PRV008,First8,Last8,Orthopedics,Medical Center Alpha,In-Network,1928374608,555-0108,YES
+PRV009,First9,Last9,General Practice,Medical Center Beta,In-Network,1928374609,555-0109,NO
+PRV010,First10,Last10,Physical Therapy,Medical Center Alpha,In-Network,1928374610,555-0110,YES
+PRV011,First11,Last11,Oncology,Medical Center Gamma,Out-of-Network,1928374611,555-0111,YES
+PRV012,First12,Last12,Oncology,Medical Center Alpha,In-Network,1928374612,555-0112,YES
+PRV013,First13,Last13,Oncology,Medical Center Beta,Out-of-Network,1928374613,555-0113,YES
+PRV014,First14,Last14,General Practice,Medical Center Beta,Out-of-Network,1928374614,555-0114,NO
+PRV015,First15,Last15,Physical Therapy,Medical Center Beta,In-Network,1928374615,555-0115,YES

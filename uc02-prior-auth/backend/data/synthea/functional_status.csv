@@ -1,0 +1,61 @@
+status_id,patient_id,assessment_date,physical_functional_status,mental_functional_status,quality_of_life_score,deterioration_detected,pre_post_treatment_flag,rehab_support_needed
+FS0001,PAT022,2025-09-29,Dependent,Severe Impairment,9,FALSE,Post-treatment,TRUE
+FS0002,PAT010,2026-05-26,Dependent,Intact,2,TRUE,Post-treatment,TRUE
+FS0003,PAT001,2025-09-27,Independent,Intact,4,FALSE,Post-treatment,FALSE
+FS0004,PAT002,2025-10-06,Dependent,Severe Impairment,5,FALSE,Routine,TRUE
+FS0005,PAT017,2026-03-30,Independent,Intact,3,FALSE,Routine,FALSE
+FS0006,PAT021,2026-01-19,Needs Assistance,Intact,2,TRUE,Pre-treatment,TRUE
+FS0007,PAT005,2026-01-21,Independent,Mild Impairment,6,FALSE,Post-treatment,FALSE
+FS0008,PAT019,2025-11-02,Needs Assistance,Intact,10,FALSE,Pre-treatment,TRUE
+FS0009,PAT019,2026-07-01,Dependent,Mild Impairment,10,FALSE,Routine,TRUE
+FS0010,PAT030,2026-05-29,Independent,Severe Impairment,8,FALSE,Routine,FALSE
+FS0011,PAT001,2026-05-07,Dependent,Mild Impairment,5,FALSE,Pre-treatment,TRUE
+FS0012,PAT009,2025-12-08,Needs Assistance,Mild Impairment,3,TRUE,Post-treatment,TRUE
+FS0013,PAT006,2026-04-14,Dependent,Intact,1,TRUE,Routine,TRUE
+FS0014,PAT030,2025-10-10,Needs Assistance,Severe Impairment,3,TRUE,Routine,TRUE
+FS0015,PAT003,2026-01-21,Independent,Mild Impairment,4,FALSE,Pre-treatment,FALSE
+FS0016,PAT019,2026-07-31,Needs Assistance,Mild Impairment,7,FALSE,Routine,TRUE
+FS0017,PAT015,2026-04-13,Independent,Intact,2,FALSE,Routine,FALSE
+FS0018,PAT018,2026-06-01,Dependent,Severe Impairment,9,FALSE,Pre-treatment,TRUE
+FS0019,PAT008,2025-10-01,Independent,Mild Impairment,8,FALSE,Pre-treatment,FALSE
+FS0020,PAT016,2025-09-12,Dependent,Mild Impairment,7,FALSE,Routine,TRUE
+FS0021,PAT029,2025-10-24,Independent,Severe Impairment,9,FALSE,Post-treatment,FALSE
+FS0022,PAT015,2026-07-25,Dependent,Intact,8,FALSE,Routine,TRUE
+FS0023,PAT013,2026-01-26,Dependent,Intact,7,FALSE,Pre-treatment,TRUE
+FS0024,PAT027,2025-10-08,Dependent,Mild Impairment,3,TRUE,Pre-treatment,TRUE
+FS0025,PAT014,2026-05-30,Dependent,Mild Impairment,6,FALSE,Post-treatment,TRUE
+FS0026,PAT006,2026-06-29,Dependent,Mild Impairment,9,FALSE,Post-treatment,TRUE
+FS0027,PAT001,2026-08-04,Independent,Mild Impairment,6,FALSE,Routine,FALSE
+FS0028,PAT024,2026-07-08,Independent,Mild Impairment,3,FALSE,Routine,FALSE
+FS0029,PAT004,2026-02-27,Independent,Intact,7,FALSE,Post-treatment,FALSE
+FS0030,PAT001,2026-01-26,Dependent,Mild Impairment,6,FALSE,Pre-treatment,TRUE
+FS0031,PAT003,2025-09-12,Dependent,Intact,5,FALSE,Pre-treatment,TRUE
+FS0032,PAT018,2026-05-16,Independent,Severe Impairment,3,FALSE,Post-treatment,FALSE
+FS0033,PAT026,2025-08-23,Independent,Severe Impairment,8,FALSE,Post-treatment,FALSE
+FS0034,PAT005,2025-10-01,Needs Assistance,Intact,1,TRUE,Pre-treatment,TRUE
+FS0035,PAT020,2025-12-18,Needs Assistance,Intact,1,TRUE,Pre-treatment,TRUE
+FS0036,PAT015,2026-07-28,Dependent,Mild Impairment,7,FALSE,Pre-treatment,TRUE
+FS0037,PAT028,2026-06-09,Independent,Severe Impairment,7,FALSE,Pre-treatment,FALSE
+FS0038,PAT009,2025-12-15,Needs Assistance,Intact,2,TRUE,Pre-treatment,TRUE
+FS0039,PAT013,2025-11-03,Independent,Severe Impairment,8,FALSE,Post-treatment,FALSE
+FS0040,PAT002,2026-07-09,Independent,Intact,10,FALSE,Routine,FALSE
+FS0041,PAT025,2026-06-09,Needs Assistance,Severe Impairment,3,TRUE,Post-treatment,TRUE
+FS0042,PAT029,2026-05-20,Independent,Severe Impairment,4,FALSE,Pre-treatment,FALSE
+FS0043,PAT009,2026-06-30,Needs Assistance,Intact,5,FALSE,Routine,TRUE
+FS0044,PAT004,2026-05-22,Independent,Mild Impairment,4,FALSE,Pre-treatment,FALSE
+FS0045,PAT025,2026-05-15,Dependent,Mild Impairment,8,FALSE,Routine,TRUE
+FS0046,PAT019,2026-06-18,Needs Assistance,Mild Impairment,9,FALSE,Post-treatment,TRUE
+FS0047,PAT011,2026-01-30,Dependent,Intact,7,FALSE,Pre-treatment,TRUE
+FS0048,PAT011,2026-03-30,Needs Assistance,Mild Impairment,4,TRUE,Post-treatment,TRUE
+FS0049,PAT025,2026-03-26,Independent,Mild Impairment,2,FALSE,Routine,FALSE
+FS0050,PAT030,2025-11-30,Independent,Severe Impairment,1,FALSE,Post-treatment,FALSE
+FS0051,PAT021,2026-06-03,Dependent,Severe Impairment,7,FALSE,Routine,TRUE
+FS0052,PAT011,2026-04-15,Independent,Severe Impairment,2,FALSE,Post-treatment,FALSE
+FS0053,PAT029,2025-11-22,Dependent,Intact,6,FALSE,Routine,TRUE
+FS0054,PAT023,2025-12-14,Needs Assistance,Severe Impairment,7,FALSE,Pre-treatment,TRUE
+FS0055,PAT008,2026-02-14,Dependent,Intact,2,TRUE,Routine,TRUE
+FS0056,PAT022,2026-06-07,Dependent,Severe Impairment,8,FALSE,Pre-treatment,TRUE
+FS0057,PAT028,2026-03-29,Needs Assistance,Mild Impairment,5,FALSE,Routine,TRUE
+FS0058,PAT021,2025-08-28,Needs Assistance,Mild Impairment,10,FALSE,Post-treatment,TRUE
+FS0059,PAT006,2025-10-15,Dependent,Severe Impairment,8,FALSE,Routine,TRUE
+FS0060,PAT014,2026-03-21,Dependent,Intact,8,FALSE,Routine,TRUE

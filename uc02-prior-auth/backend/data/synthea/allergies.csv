@@ -1,0 +1,41 @@
+allergy_id,patient_id,allergen_type,allergen_name,reaction_severity,onset_date,active_status,conflict_alert_flag
+ALG0001,PAT001,Medication,Ibuprofen,Moderate,2024-01-19,Inactive,FALSE
+ALG0002,PAT008,Medication,Sulfa Drugs,Moderate,2014-04-23,Inactive,FALSE
+ALG0003,PAT029,Medication,Penicillin,Mild,2019-12-14,Active,FALSE
+ALG0004,PAT002,Environmental,Latex,Moderate,2022-06-29,Inactive,FALSE
+ALG0005,PAT014,Environmental,Latex,Severe,2023-09-09,Active,TRUE
+ALG0006,PAT013,Medication,Sulfa Drugs,Moderate,2016-06-12,Active,FALSE
+ALG0007,PAT011,Medication,Sulfa Drugs,Severe,2022-10-03,Active,FALSE
+ALG0008,PAT006,Medication,Sulfa Drugs,Mild,2024-01-17,Active,FALSE
+ALG0009,PAT005,Environmental,Latex,Mild,2021-08-08,Active,FALSE
+ALG0010,PAT024,Medication,Penicillin,Mild,2017-07-16,Inactive,FALSE
+ALG0011,PAT024,Medication,Ibuprofen,Moderate,2016-05-02,Active,FALSE
+ALG0012,PAT005,Environmental,Pollen,Mild,2013-12-29,Inactive,TRUE
+ALG0013,PAT006,Environmental,Latex,Mild,2019-01-02,Active,FALSE
+ALG0014,PAT015,Medication,Sulfa Drugs,Moderate,2021-10-18,Active,FALSE
+ALG0015,PAT016,Medication,Penicillin,Severe,2013-08-24,Active,FALSE
+ALG0016,PAT003,Food,Peanuts,Mild,2023-07-31,Active,TRUE
+ALG0017,PAT018,Environmental,Pollen,Moderate,2020-10-03,Inactive,FALSE
+ALG0018,PAT006,Food,Peanuts,Moderate,2018-04-16,Active,FALSE
+ALG0019,PAT019,Medication,Ibuprofen,Mild,2025-02-24,Active,FALSE
+ALG0020,PAT011,Medication,Penicillin,Mild,2020-01-20,Active,TRUE
+ALG0021,PAT002,Food,Peanuts,Severe,2016-06-17,Active,TRUE
+ALG0022,PAT022,Environmental,Pollen,Severe,2025-05-27,Active,FALSE
+ALG0023,PAT023,Medication,Penicillin,Moderate,2019-10-26,Inactive,FALSE
+ALG0024,PAT005,Environmental,Latex,Moderate,2024-11-01,Inactive,FALSE
+ALG0025,PAT010,Medication,Ibuprofen,Moderate,2017-12-08,Inactive,FALSE
+ALG0026,PAT003,Medication,Penicillin,Severe,2018-05-06,Active,FALSE
+ALG0027,PAT009,Medication,Sulfa Drugs,Mild,2015-08-30,Inactive,FALSE
+ALG0028,PAT019,Environmental,Latex,Mild,2025-05-24,Active,TRUE
+ALG0029,PAT002,Food,Peanuts,Moderate,2018-10-26,Inactive,FALSE
+ALG0030,PAT005,Food,Peanuts,Mild,2025-01-02,Active,FALSE
+ALG0031,PAT013,Medication,Sulfa Drugs,Moderate,2017-04-27,Active,FALSE
+ALG0032,PAT006,Food,Peanuts,Severe,2014-07-23,Active,FALSE
+ALG0033,PAT015,Medication,Ibuprofen,Mild,2023-04-13,Inactive,TRUE
+ALG0034,PAT028,Medication,Ibuprofen,Severe,2024-05-04,Active,TRUE
+ALG0035,PAT029,Medication,Penicillin,Severe,2016-09-02,Inactive,FALSE
+ALG0036,PAT021,Environmental,Latex,Severe,2013-12-22,Inactive,FALSE
+ALG0037,PAT015,Environmental,Pollen,Moderate,2015-03-11,Inactive,FALSE
+ALG0038,PAT022,Food,Peanuts,Severe,2025-05-24,Active,TRUE
+ALG0039,PAT021,Environmental,Latex,Moderate,2023-11-30,Inactive,FALSE
+ALG0040,PAT025,Medication,Ibuprofen,Severe,2018-03-23,Inactive,FALSE

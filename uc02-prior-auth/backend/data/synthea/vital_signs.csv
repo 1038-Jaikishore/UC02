@@ -1,0 +1,101 @@
+vital_id,patient_id,date_recorded,vital_type,value,unit,abnormal_flag,severity_indicator,trend
+VIT00001,PAT003,2026-07-01 06:12,Blood Pressure,153/69,mmHg,TRUE,Elevated,Stable
+VIT00002,PAT022,2026-06-14 09:12,Blood Pressure,135/107,mmHg,TRUE,Elevated,Improving
+VIT00003,PAT008,2026-08-02 00:12,Respiratory Rate,14,breaths/min,FALSE,Normal,Stable
+VIT00004,PAT010,2026-05-13 09:12,Respiratory Rate,21,breaths/min,FALSE,Normal,Deteriorating
+VIT00005,PAT014,2026-06-13 06:12,Blood Pressure,155/70,mmHg,TRUE,Elevated,Deteriorating
+VIT00006,PAT011,2026-07-31 15:12,Temperature,103.0,F,TRUE,Critical,Stable
+VIT00007,PAT001,2026-05-15 21:12,Temperature,102.8,F,TRUE,Elevated,Stable
+VIT00008,PAT024,2026-06-22 23:12,Temperature,97.3,F,FALSE,Normal,Improving
+VIT00009,PAT030,2026-07-21 04:12,Temperature,98.8,F,FALSE,Normal,Stable
+VIT00010,PAT012,2026-05-13 21:12,Temperature,99.1,F,FALSE,Normal,Improving
+VIT00011,PAT015,2026-05-22 09:12,SpO2,91,%,TRUE,Elevated,Stable
+VIT00012,PAT012,2026-05-24 14:12,Heart Rate,76,bpm,FALSE,Normal,Deteriorating
+VIT00013,PAT022,2026-05-30 16:12,Respiratory Rate,17,breaths/min,FALSE,Normal,Stable
+VIT00014,PAT006,2026-07-06 14:12,Heart Rate,77,bpm,FALSE,Normal,Deteriorating
+VIT00015,PAT013,2026-07-20 06:12,Temperature,98.7,F,FALSE,Normal,Deteriorating
+VIT00016,PAT024,2026-07-04 08:12,Temperature,98.7,F,FALSE,Normal,Deteriorating
+VIT00017,PAT018,2026-07-04 06:12,Blood Pressure,106/88,mmHg,FALSE,Normal,Deteriorating
+VIT00018,PAT023,2026-05-12 05:12,Temperature,97.7,F,FALSE,Normal,Deteriorating
+VIT00019,PAT014,2026-05-23 08:12,Respiratory Rate,18,breaths/min,FALSE,Normal,Improving
+VIT00020,PAT010,2026-06-09 00:12,Heart Rate,76,bpm,FALSE,Normal,Improving
+VIT00021,PAT030,2026-05-26 01:12,Respiratory Rate,15,breaths/min,FALSE,Normal,Improving
+VIT00022,PAT017,2026-06-01 03:12,SpO2,96,%,FALSE,Normal,Deteriorating
+VIT00023,PAT010,2026-05-19 16:12,Heart Rate,112,bpm,TRUE,Elevated,Deteriorating
+VIT00024,PAT022,2026-05-16 12:12,Respiratory Rate,25,breaths/min,FALSE,Normal,Deteriorating
+VIT00025,PAT014,2026-08-08 20:12,SpO2,100,%,FALSE,Normal,Stable
+VIT00026,PAT001,2026-05-28 06:12,Heart Rate,94,bpm,FALSE,Normal,Improving
+VIT00027,PAT014,2026-07-03 11:12,Temperature,102.1,F,TRUE,Elevated,Stable
+VIT00028,PAT004,2026-05-15 15:12,Blood Pressure,127/70,mmHg,FALSE,Normal,Stable
+VIT00029,PAT013,2026-08-01 22:12,Temperature,97.3,F,FALSE,Normal,Stable
+VIT00030,PAT017,2026-07-15 07:12,Blood Pressure,114/100,mmHg,FALSE,Normal,Improving
+VIT00031,PAT009,2026-05-24 01:12,Respiratory Rate,24,breaths/min,FALSE,Normal,Stable
+VIT00032,PAT019,2026-05-10 05:12,Temperature,101.5,F,TRUE,Elevated,Deteriorating
+VIT00033,PAT023,2026-05-26 09:12,Respiratory Rate,16,breaths/min,FALSE,Normal,Stable
+VIT00034,PAT010,2026-05-20 07:12,Respiratory Rate,20,breaths/min,FALSE,Normal,Improving
+VIT00035,PAT024,2026-08-06 01:12,SpO2,95,%,FALSE,Normal,Stable
+VIT00036,PAT018,2026-06-01 03:12,Heart Rate,52,bpm,TRUE,Elevated,Stable
+VIT00037,PAT023,2026-05-25 17:12,Heart Rate,112,bpm,TRUE,Elevated,Stable
+VIT00038,PAT018,2026-05-22 01:12,Heart Rate,82,bpm,FALSE,Normal,Improving
+VIT00039,PAT007,2026-08-09 08:12,Blood Pressure,108/65,mmHg,FALSE,Normal,Improving
+VIT00040,PAT001,2026-05-04 23:12,Temperature,101.0,F,TRUE,Elevated,Improving
+VIT00041,PAT019,2026-05-26 05:12,Respiratory Rate,16,breaths/min,FALSE,Normal,Deteriorating
+VIT00042,PAT017,2026-06-04 07:12,Heart Rate,117,bpm,TRUE,Elevated,Stable
+VIT00043,PAT001,2026-07-05 01:12,SpO2,88,%,TRUE,Critical,Deteriorating
+VIT00044,PAT023,2026-08-11 00:12,Heart Rate,98,bpm,FALSE,Normal,Deteriorating
+VIT00045,PAT017,2026-05-21 05:12,Blood Pressure,167/84,mmHg,TRUE,Critical,Stable
+VIT00046,PAT009,2026-05-24 15:12,Blood Pressure,132/81,mmHg,TRUE,Elevated,Improving
+VIT00047,PAT012,2026-06-26 07:12,Temperature,100.2,F,FALSE,Normal,Improving
+VIT00048,PAT025,2026-05-06 16:12,SpO2,94,%,TRUE,Elevated,Improving
+VIT00049,PAT025,2026-07-22 23:12,SpO2,92,%,TRUE,Elevated,Stable
+VIT00050,PAT008,2026-07-12 06:12,Respiratory Rate,19,breaths/min,FALSE,Normal,Deteriorating
+VIT00051,PAT003,2026-05-10 16:12,Respiratory Rate,18,breaths/min,FALSE,Normal,Stable
+VIT00052,PAT021,2026-07-06 00:12,SpO2,90,%,TRUE,Elevated,Stable
+VIT00053,PAT002,2026-05-06 22:12,SpO2,97,%,FALSE,Normal,Deteriorating
+VIT00054,PAT014,2026-06-28 20:12,Temperature,102.4,F,TRUE,Elevated,Improving
+VIT00055,PAT011,2026-08-02 10:12,Heart Rate,99,bpm,FALSE,Normal,Improving
+VIT00056,PAT017,2026-08-07 04:12,Blood Pressure,151/103,mmHg,TRUE,Elevated,Improving
+VIT00057,PAT021,2026-07-31 13:12,SpO2,97,%,FALSE,Normal,Stable
+VIT00058,PAT003,2026-08-10 19:12,SpO2,100,%,FALSE,Normal,Stable
+VIT00059,PAT026,2026-05-15 04:12,Blood Pressure,94/88,mmHg,FALSE,Normal,Improving
+VIT00060,PAT020,2026-05-27 13:12,Heart Rate,119,bpm,TRUE,Elevated,Stable
+VIT00061,PAT015,2026-07-30 11:12,Temperature,97.2,F,FALSE,Normal,Stable
+VIT00062,PAT015,2026-07-21 03:12,Respiratory Rate,21,breaths/min,FALSE,Normal,Improving
+VIT00063,PAT009,2026-05-06 17:12,Temperature,100.2,F,FALSE,Normal,Deteriorating
+VIT00064,PAT010,2026-06-02 07:12,Temperature,98.4,F,FALSE,Normal,Stable
+VIT00065,PAT019,2026-07-16 17:12,Blood Pressure,144/90,mmHg,TRUE,Elevated,Stable
+VIT00066,PAT015,2026-07-16 05:12,Heart Rate,55,bpm,TRUE,Elevated,Stable
+VIT00067,PAT004,2026-07-10 23:12,Respiratory Rate,24,breaths/min,FALSE,Normal,Improving
+VIT00068,PAT009,2026-05-08 02:12,Heart Rate,122,bpm,TRUE,Critical,Deteriorating
+VIT00069,PAT007,2026-05-18 10:12,Heart Rate,127,bpm,TRUE,Critical,Improving
+VIT00070,PAT013,2026-08-08 01:12,SpO2,94,%,TRUE,Elevated,Deteriorating
+VIT00071,PAT002,2026-05-28 08:12,Respiratory Rate,27,breaths/min,FALSE,Normal,Improving
+VIT00072,PAT005,2026-08-04 04:12,Respiratory Rate,21,breaths/min,FALSE,Normal,Stable
+VIT00073,PAT016,2026-06-18 05:12,Temperature,102.2,F,TRUE,Elevated,Improving
+VIT00074,PAT014,2026-07-28 12:12,Blood Pressure,133/83,mmHg,TRUE,Elevated,Improving
+VIT00075,PAT006,2026-06-18 06:12,Respiratory Rate,12,breaths/min,FALSE,Normal,Deteriorating
+VIT00076,PAT017,2026-07-30 14:12,Heart Rate,59,bpm,TRUE,Elevated,Deteriorating
+VIT00077,PAT014,2026-07-26 11:12,Heart Rate,71,bpm,FALSE,Normal,Stable
+VIT00078,PAT022,2026-06-12 06:12,Heart Rate,116,bpm,TRUE,Elevated,Improving
+VIT00079,PAT010,2026-05-07 22:12,Heart Rate,51,bpm,TRUE,Elevated,Stable
+VIT00080,PAT021,2026-08-05 04:12,SpO2,99,%,FALSE,Normal,Improving
+VIT00081,PAT014,2026-07-30 14:12,Respiratory Rate,21,breaths/min,FALSE,Normal,Stable
+VIT00082,PAT025,2026-07-31 04:12,Heart Rate,118,bpm,TRUE,Elevated,Stable
+VIT00083,PAT005,2026-06-01 06:12,Temperature,99.5,F,FALSE,Normal,Deteriorating
+VIT00084,PAT026,2026-05-16 10:12,SpO2,95,%,FALSE,Normal,Deteriorating
+VIT00085,PAT029,2026-05-18 23:12,Respiratory Rate,12,breaths/min,FALSE,Normal,Improving
+VIT00086,PAT017,2026-06-06 11:12,Blood Pressure,90/86,mmHg,FALSE,Normal,Deteriorating
+VIT00087,PAT001,2026-05-03 21:12,Heart Rate,96,bpm,FALSE,Normal,Improving
+VIT00088,PAT001,2026-05-27 18:12,Temperature,98.0,F,FALSE,Normal,Improving
+VIT00089,PAT011,2026-05-20 14:12,Blood Pressure,124/91,mmHg,FALSE,Normal,Stable
+VIT00090,PAT016,2026-07-08 03:12,SpO2,94,%,TRUE,Elevated,Stable
+VIT00091,PAT004,2026-07-20 14:12,Heart Rate,66,bpm,FALSE,Normal,Improving
+VIT00092,PAT003,2026-05-21 23:12,Temperature,101.3,F,TRUE,Elevated,Improving
+VIT00093,PAT019,2026-06-07 22:12,Temperature,102.4,F,TRUE,Elevated,Deteriorating
+VIT00094,PAT010,2026-06-02 01:12,SpO2,88,%,TRUE,Critical,Improving
+VIT00095,PAT030,2026-07-13 07:12,Blood Pressure,139/90,mmHg,TRUE,Elevated,Improving
+VIT00096,PAT010,2026-06-09 00:12,Blood Pressure,100/86,mmHg,FALSE,Normal,Deteriorating
+VIT00097,PAT020,2026-05-25 11:12,Respiratory Rate,22,breaths/min,FALSE,Normal,Improving
+VIT00098,PAT015,2026-06-25 19:12,Respiratory Rate,21,breaths/min,FALSE,Normal,Improving
+VIT00099,PAT002,2026-06-25 04:12,Heart Rate,77,bpm,FALSE,Normal,Deteriorating
+VIT00100,PAT014,2026-05-19 06:12,Temperature,98.9,F,FALSE,Normal,Stable

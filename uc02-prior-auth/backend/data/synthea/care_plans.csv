@@ -1,0 +1,41 @@
+plan_id,patient_id,provider_id,current_treatment_plan,planned_procedures,treatment_goals,start_date,end_date,treatments_attempted,status
+CP0001,PAT026,PRV001,Post-operative Recovery,"Wound care, Mobilization","Full range of motion, No infection",2026-04-10,2026-08-14,None,Active
+CP0002,PAT023,PRV004,Conservative Pain Management,Physical Therapy,Reduce pain by 50%,2026-04-06,2026-09-23,Physical Therapy,Active
+CP0003,PAT024,PRV004,Diabetes Management,Blood Glucose Monitoring,HbA1c below 7.0,2026-03-15,2026-08-24,Physical Therapy,Active
+CP0004,PAT007,PRV015,Oncology Care,"Chemotherapy, Radiation","Tumor shrinkage, Remission",2025-10-03,2026-02-01,Treatment B,Cancelled
+CP0005,PAT021,PRV012,Cardiac Rehab,"Stress Test, Supervised Exercise",Improve cardiovascular fitness,2026-06-01,2026-09-25,None,Active
+CP0006,PAT019,PRV006,Conservative Pain Management,Physical Therapy,Reduce pain by 50%,2026-01-06,2026-04-18,Treatment A,Completed
+CP0007,PAT023,PRV014,Cardiac Rehab,"Stress Test, Supervised Exercise",Improve cardiovascular fitness,2026-06-20,2026-11-06,None,Active
+CP0008,PAT024,PRV013,Diabetes Management,Blood Glucose Monitoring,HbA1c below 7.0,2026-02-16,2026-07-19,None,Completed
+CP0009,PAT016,PRV002,Cardiac Rehab,"Stress Test, Supervised Exercise",Improve cardiovascular fitness,2026-05-05,2026-08-14,Treatment B,Active
+CP0010,PAT023,PRV011,Conservative Pain Management,Physical Therapy,Reduce pain by 50%,2025-12-25,2026-05-27,None,Completed
+CP0011,PAT026,PRV014,Diabetes Management,Blood Glucose Monitoring,HbA1c below 7.0,2026-06-27,2026-12-01,Treatment B,Active
+CP0012,PAT010,PRV014,Post-operative Recovery,"Wound care, Mobilization","Full range of motion, No infection",2025-09-25,2026-03-19,Treatment A,Cancelled
+CP0013,PAT002,PRV009,Cardiac Rehab,"Stress Test, Supervised Exercise",Improve cardiovascular fitness,2025-08-27,2025-12-01,None,Completed
+CP0014,PAT027,PRV003,Oncology Care,"Chemotherapy, Radiation","Tumor shrinkage, Remission",2026-03-29,2026-07-10,Treatment A,Completed
+CP0015,PAT029,PRV015,Conservative Pain Management,Physical Therapy,Reduce pain by 50%,2025-12-29,2026-04-10,None,Completed
+CP0016,PAT018,PRV006,Diabetes Management,Blood Glucose Monitoring,HbA1c below 7.0,2025-09-16,2025-12-16,Physical Therapy,Completed
+CP0017,PAT017,PRV010,Diabetes Management,Blood Glucose Monitoring,HbA1c below 7.0,2025-11-26,2026-05-16,Treatment A,Completed
+CP0018,PAT017,PRV010,Post-operative Recovery,"Wound care, Mobilization","Full range of motion, No infection",2025-09-11,2025-12-24,Treatment B,Cancelled
+CP0019,PAT003,PRV010,Post-operative Recovery,"Wound care, Mobilization","Full range of motion, No infection",2025-10-05,2026-02-06,Treatment B,Cancelled
+CP0020,PAT004,PRV009,Oncology Care,"Chemotherapy, Radiation","Tumor shrinkage, Remission",2026-04-08,2026-07-17,Treatment B,Cancelled
+CP0021,PAT021,PRV007,Post-operative Recovery,"Wound care, Mobilization","Full range of motion, No infection",2025-09-25,2025-12-29,None,Completed
+CP0022,PAT028,PRV006,Diabetes Management,Blood Glucose Monitoring,HbA1c below 7.0,2026-02-21,2026-06-10,Treatment B,Completed
+CP0023,PAT024,PRV004,Conservative Pain Management,Physical Therapy,Reduce pain by 50%,2026-06-11,2026-10-27,None,Active
+CP0024,PAT017,PRV004,Cardiac Rehab,"Stress Test, Supervised Exercise",Improve cardiovascular fitness,2026-06-16,2026-11-07,Physical Therapy,Active
+CP0025,PAT004,PRV014,Conservative Pain Management,Physical Therapy,Reduce pain by 50%,2026-06-15,2026-10-08,Treatment B,Active
+CP0026,PAT025,PRV013,Diabetes Management,Blood Glucose Monitoring,HbA1c below 7.0,2026-01-09,2026-06-21,Treatment A,Completed
+CP0027,PAT014,PRV005,Cardiac Rehab,"Stress Test, Supervised Exercise",Improve cardiovascular fitness,2026-07-11,2026-12-20,Treatment B,Active
+CP0028,PAT008,PRV010,Cardiac Rehab,"Stress Test, Supervised Exercise",Improve cardiovascular fitness,2025-08-14,2026-02-04,Treatment B,Cancelled
+CP0029,PAT013,PRV011,Post-operative Recovery,"Wound care, Mobilization","Full range of motion, No infection",2026-02-01,2026-07-07,None,Completed
+CP0030,PAT015,PRV001,Conservative Pain Management,Physical Therapy,Reduce pain by 50%,2025-08-12,2025-12-23,None,Cancelled
+CP0031,PAT022,PRV014,Oncology Care,"Chemotherapy, Radiation","Tumor shrinkage, Remission",2026-02-11,2026-07-21,Treatment A,Completed
+CP0032,PAT022,PRV010,Post-operative Recovery,"Wound care, Mobilization","Full range of motion, No infection",2026-02-16,2026-06-03,Physical Therapy,Cancelled
+CP0033,PAT001,PRV005,Conservative Pain Management,Physical Therapy,Reduce pain by 50%,2026-02-26,2026-07-11,Treatment B,Cancelled
+CP0034,PAT022,PRV006,Post-operative Recovery,"Wound care, Mobilization","Full range of motion, No infection",2026-05-12,2026-08-29,None,Active
+CP0035,PAT027,PRV004,Post-operative Recovery,"Wound care, Mobilization","Full range of motion, No infection",2025-12-20,2026-05-22,Treatment A,Completed
+CP0036,PAT010,PRV014,Cardiac Rehab,"Stress Test, Supervised Exercise",Improve cardiovascular fitness,2026-05-13,2026-09-17,None,Active
+CP0037,PAT006,PRV006,Conservative Pain Management,Physical Therapy,Reduce pain by 50%,2025-09-01,2025-12-23,Treatment B,Completed
+CP0038,PAT013,PRV004,Conservative Pain Management,Physical Therapy,Reduce pain by 50%,2025-12-28,2026-04-06,Treatment B,Cancelled
+CP0039,PAT002,PRV004,Conservative Pain Management,Physical Therapy,Reduce pain by 50%,2026-03-01,2026-08-13,Treatment B,Active
+CP0040,PAT019,PRV002,Diabetes Management,Blood Glucose Monitoring,HbA1c below 7.0,2026-05-22,2026-10-11,Treatment A,Active

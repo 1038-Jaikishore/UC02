@@ -1,0 +1,81 @@
+result_id,patient_id,test_name,test_date,result_value,reference_range,abnormal_flag,evidence_for_medical_necessity
+DIAG0001,PAT017,HbA1c,2026-07-09,8.0%,< 5.7%,TRUE,TRUE
+DIAG0002,PAT023,X-Ray Knee,2026-03-07,Severe Osteoarthritis,Normal,TRUE,TRUE
+DIAG0003,PAT014,MRI Lumbar Spine,2026-03-09,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0004,PAT015,HbA1c,2025-10-18,7.0%,< 5.7%,TRUE,TRUE
+DIAG0005,PAT030,MRI Lumbar Spine,2025-10-31,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0006,PAT012,MRI Lumbar Spine,2026-05-10,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0007,PAT025,X-Ray Knee,2026-05-22,Severe Osteoarthritis,Normal,TRUE,TRUE
+DIAG0008,PAT004,MRI Lumbar Spine,2025-10-03,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0009,PAT004,Complete Blood Count,2026-02-10,Normal,Normal,FALSE,FALSE
+DIAG0010,PAT028,X-Ray Knee,2026-07-11,Severe Osteoarthritis,Normal,TRUE,TRUE
+DIAG0011,PAT017,X-Ray Knee,2025-09-11,Severe Osteoarthritis,Normal,TRUE,TRUE
+DIAG0012,PAT021,HbA1c,2026-07-14,8.9%,< 5.7%,TRUE,TRUE
+DIAG0013,PAT029,HbA1c,2025-11-10,8.4%,< 5.7%,TRUE,TRUE
+DIAG0014,PAT007,MRI Lumbar Spine,2026-04-29,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0015,PAT003,Complete Blood Count,2026-01-03,Normal,Normal,FALSE,FALSE
+DIAG0016,PAT004,HbA1c,2025-09-26,8.9%,< 5.7%,TRUE,TRUE
+DIAG0017,PAT015,X-Ray Knee,2026-02-20,Severe Osteoarthritis,Normal,TRUE,TRUE
+DIAG0018,PAT002,X-Ray Knee,2025-11-05,Severe Osteoarthritis,Normal,TRUE,TRUE
+DIAG0019,PAT017,HbA1c,2026-05-28,8.4%,< 5.7%,TRUE,TRUE
+DIAG0020,PAT022,Complete Blood Count,2025-09-18,Normal,Normal,FALSE,FALSE
+DIAG0021,PAT016,X-Ray Knee,2025-10-23,Severe Osteoarthritis,Normal,TRUE,TRUE
+DIAG0022,PAT025,MRI Lumbar Spine,2025-11-29,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0023,PAT011,MRI Lumbar Spine,2026-05-07,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0024,PAT009,Complete Blood Count,2025-08-19,Normal,Normal,FALSE,FALSE
+DIAG0025,PAT014,X-Ray Knee,2026-01-08,Severe Osteoarthritis,Normal,TRUE,TRUE
+DIAG0026,PAT005,HbA1c,2025-12-04,7.2%,< 5.7%,TRUE,TRUE
+DIAG0027,PAT001,X-Ray Knee,2025-11-25,Severe Osteoarthritis,Normal,TRUE,TRUE
+DIAG0028,PAT007,Complete Blood Count,2026-05-02,Normal,Normal,FALSE,FALSE
+DIAG0029,PAT015,HbA1c,2026-03-24,7.6%,< 5.7%,TRUE,TRUE
+DIAG0030,PAT007,MRI Lumbar Spine,2026-06-19,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0031,PAT011,MRI Lumbar Spine,2026-05-15,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0032,PAT010,HbA1c,2026-03-02,6.7%,< 5.7%,TRUE,FALSE
+DIAG0033,PAT009,Complete Blood Count,2026-03-02,Normal,Normal,FALSE,FALSE
+DIAG0034,PAT026,Complete Blood Count,2025-12-11,Normal,Normal,FALSE,FALSE
+DIAG0035,PAT029,Complete Blood Count,2026-01-13,Normal,Normal,FALSE,FALSE
+DIAG0036,PAT019,MRI Lumbar Spine,2026-01-06,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0037,PAT001,HbA1c,2026-03-19,5.3%,< 5.7%,FALSE,FALSE
+DIAG0038,PAT013,X-Ray Knee,2026-04-16,Severe Osteoarthritis,Normal,TRUE,TRUE
+DIAG0039,PAT016,HbA1c,2026-05-08,7.7%,< 5.7%,TRUE,TRUE
+DIAG0040,PAT018,MRI Lumbar Spine,2026-07-09,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0041,PAT010,MRI Lumbar Spine,2026-03-21,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0042,PAT001,HbA1c,2026-05-22,5.2%,< 5.7%,FALSE,FALSE
+DIAG0043,PAT009,MRI Lumbar Spine,2025-09-18,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0044,PAT029,HbA1c,2026-03-12,7.8%,< 5.7%,TRUE,TRUE
+DIAG0045,PAT018,X-Ray Knee,2026-07-12,Severe Osteoarthritis,Normal,TRUE,TRUE
+DIAG0046,PAT026,Complete Blood Count,2026-02-18,Normal,Normal,FALSE,FALSE
+DIAG0047,PAT014,X-Ray Knee,2026-08-01,Severe Osteoarthritis,Normal,TRUE,TRUE
+DIAG0048,PAT023,MRI Lumbar Spine,2026-06-16,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0049,PAT013,HbA1c,2026-02-23,7.8%,< 5.7%,TRUE,TRUE
+DIAG0050,PAT028,MRI Lumbar Spine,2026-06-04,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0051,PAT003,X-Ray Knee,2026-03-14,Severe Osteoarthritis,Normal,TRUE,TRUE
+DIAG0052,PAT012,HbA1c,2026-01-14,9.2%,< 5.7%,TRUE,TRUE
+DIAG0053,PAT008,MRI Lumbar Spine,2026-01-05,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0054,PAT019,MRI Lumbar Spine,2025-09-02,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0055,PAT029,X-Ray Knee,2026-04-01,Severe Osteoarthritis,Normal,TRUE,TRUE
+DIAG0056,PAT027,X-Ray Knee,2026-05-10,Severe Osteoarthritis,Normal,TRUE,TRUE
+DIAG0057,PAT014,Complete Blood Count,2025-11-19,Normal,Normal,FALSE,FALSE
+DIAG0058,PAT019,X-Ray Knee,2026-04-17,Severe Osteoarthritis,Normal,TRUE,TRUE
+DIAG0059,PAT027,Complete Blood Count,2026-07-19,Normal,Normal,FALSE,FALSE
+DIAG0060,PAT007,MRI Lumbar Spine,2026-03-03,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0061,PAT022,Complete Blood Count,2026-02-10,Normal,Normal,FALSE,FALSE
+DIAG0062,PAT014,Complete Blood Count,2025-10-22,Normal,Normal,FALSE,FALSE
+DIAG0063,PAT012,MRI Lumbar Spine,2026-07-20,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0064,PAT022,Complete Blood Count,2025-08-26,Normal,Normal,FALSE,FALSE
+DIAG0065,PAT022,MRI Lumbar Spine,2025-11-14,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0066,PAT009,Complete Blood Count,2025-11-01,Normal,Normal,FALSE,FALSE
+DIAG0067,PAT025,MRI Lumbar Spine,2025-11-19,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0068,PAT012,MRI Lumbar Spine,2026-03-18,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0069,PAT008,MRI Lumbar Spine,2026-06-03,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0070,PAT010,Complete Blood Count,2026-04-25,Normal,Normal,FALSE,FALSE
+DIAG0071,PAT008,X-Ray Knee,2026-01-22,Severe Osteoarthritis,Normal,TRUE,TRUE
+DIAG0072,PAT022,HbA1c,2025-10-14,7.8%,< 5.7%,TRUE,TRUE
+DIAG0073,PAT002,Complete Blood Count,2026-03-21,Normal,Normal,FALSE,FALSE
+DIAG0074,PAT013,MRI Lumbar Spine,2025-09-10,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0075,PAT015,X-Ray Knee,2026-05-01,Severe Osteoarthritis,Normal,TRUE,TRUE
+DIAG0076,PAT006,X-Ray Knee,2025-12-14,Severe Osteoarthritis,Normal,TRUE,TRUE
+DIAG0077,PAT026,X-Ray Knee,2026-01-17,Severe Osteoarthritis,Normal,TRUE,TRUE
+DIAG0078,PAT014,MRI Lumbar Spine,2026-04-30,Herniated disc L4-L5,Normal structure,TRUE,TRUE
+DIAG0079,PAT025,HbA1c,2025-10-16,9.0%,< 5.7%,TRUE,TRUE
+DIAG0080,PAT028,Complete Blood Count,2026-01-17,Normal,Normal,FALSE,FALSE

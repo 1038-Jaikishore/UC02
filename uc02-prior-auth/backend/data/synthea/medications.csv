@@ -1,0 +1,101 @@
+medication_id,patient_id,medication_name,dosage,start_date,end_date,status,step_therapy_requirement_met
+MED0001,PAT028,Metformin,500mg twice daily,2023-02-17,2023-11-17,Discontinued,FALSE
+MED0002,PAT016,Lisinopril,10mg daily,2025-06-06,N/A,Active,FALSE
+MED0003,PAT009,Metformin,500mg twice daily,2026-02-24,2026-08-04,Discontinued,FALSE
+MED0004,PAT020,Drug A (Conservative),20mg daily,2024-07-06,2025-03-15,Discontinued,TRUE
+MED0005,PAT014,Metformin,500mg twice daily,2023-11-22,N/A,Active,FALSE
+MED0006,PAT029,Drug B (Advanced),50mg weekly,2025-12-03,2026-05-25,Discontinued,FALSE
+MED0007,PAT016,Ibuprofen,400mg as needed,2026-04-29,N/A,Active,FALSE
+MED0008,PAT018,Ibuprofen,400mg as needed,2022-08-27,2023-08-10,Discontinued,FALSE
+MED0009,PAT013,Metformin,500mg twice daily,2025-09-25,2026-06-14,Discontinued,FALSE
+MED0010,PAT017,Drug A (Conservative),20mg daily,2026-04-27,N/A,Active,FALSE
+MED0011,PAT014,Ibuprofen,400mg as needed,2025-04-16,2026-03-04,Discontinued,FALSE
+MED0012,PAT002,Drug A (Conservative),20mg daily,2024-10-18,2025-07-27,Discontinued,TRUE
+MED0013,PAT021,Drug B (Advanced),50mg weekly,2021-07-04,N/A,Active,FALSE
+MED0014,PAT022,Drug A (Conservative),20mg daily,2022-12-10,2023-04-03,Discontinued,TRUE
+MED0015,PAT003,Metformin,500mg twice daily,2023-04-20,N/A,Active,FALSE
+MED0016,PAT008,Drug A (Conservative),20mg daily,2025-11-12,N/A,Active,FALSE
+MED0017,PAT006,Drug A (Conservative),20mg daily,2025-06-16,2025-11-20,Discontinued,TRUE
+MED0018,PAT030,Ibuprofen,400mg as needed,2025-03-04,N/A,Active,FALSE
+MED0019,PAT017,Ibuprofen,400mg as needed,2021-10-13,2022-07-29,Discontinued,FALSE
+MED0020,PAT027,Drug B (Advanced),50mg weekly,2024-12-19,N/A,Active,FALSE
+MED0021,PAT025,Drug B (Advanced),50mg weekly,2021-08-09,2022-05-10,Discontinued,FALSE
+MED0022,PAT005,Drug A (Conservative),20mg daily,2025-01-29,N/A,Active,FALSE
+MED0023,PAT009,Drug A (Conservative),20mg daily,2021-08-02,N/A,Active,FALSE
+MED0024,PAT027,Drug A (Conservative),20mg daily,2022-01-11,N/A,Active,FALSE
+MED0025,PAT027,Ibuprofen,400mg as needed,2024-10-28,2025-09-17,Discontinued,FALSE
+MED0026,PAT007,Ibuprofen,400mg as needed,2023-10-29,N/A,Active,FALSE
+MED0027,PAT020,Drug A (Conservative),20mg daily,2021-07-29,N/A,Active,FALSE
+MED0028,PAT006,Metformin,500mg twice daily,2025-12-04,2026-05-07,Discontinued,FALSE
+MED0029,PAT026,Ibuprofen,400mg as needed,2025-11-01,2025-12-01,Discontinued,FALSE
+MED0030,PAT001,Lisinopril,10mg daily,2023-01-16,N/A,Active,FALSE
+MED0031,PAT012,Ibuprofen,400mg as needed,2022-12-27,2023-05-08,Discontinued,FALSE
+MED0032,PAT013,Metformin,500mg twice daily,2024-04-02,2024-05-07,Discontinued,FALSE
+MED0033,PAT016,Drug B (Advanced),50mg weekly,2026-04-26,N/A,Active,FALSE
+MED0034,PAT015,Drug B (Advanced),50mg weekly,2025-10-07,N/A,Active,FALSE
+MED0035,PAT005,Metformin,500mg twice daily,2025-09-24,N/A,Active,FALSE
+MED0036,PAT003,Drug A (Conservative),20mg daily,2024-05-24,N/A,Active,FALSE
+MED0037,PAT029,Lisinopril,10mg daily,2022-04-04,2023-03-15,Discontinued,FALSE
+MED0038,PAT007,Ibuprofen,400mg as needed,2024-09-25,2025-06-29,Discontinued,FALSE
+MED0039,PAT007,Lisinopril,10mg daily,2026-06-03,2027-03-13,Discontinued,FALSE
+MED0040,PAT028,Drug A (Conservative),20mg daily,2023-06-23,N/A,Active,FALSE
+MED0041,PAT020,Drug A (Conservative),20mg daily,2024-01-13,2024-04-13,Discontinued,TRUE
+MED0042,PAT012,Metformin,500mg twice daily,2023-03-08,2023-12-23,Discontinued,FALSE
+MED0043,PAT002,Ibuprofen,400mg as needed,2021-11-13,N/A,Active,FALSE
+MED0044,PAT019,Drug A (Conservative),20mg daily,2023-06-16,2023-10-20,Discontinued,TRUE
+MED0045,PAT020,Metformin,500mg twice daily,2022-08-29,N/A,Active,FALSE
+MED0046,PAT023,Drug B (Advanced),50mg weekly,2022-01-03,2022-09-28,Discontinued,FALSE
+MED0047,PAT016,Ibuprofen,400mg as needed,2022-03-13,2022-08-30,Discontinued,FALSE
+MED0048,PAT001,Metformin,500mg twice daily,2025-05-18,2025-08-14,Discontinued,FALSE
+MED0049,PAT013,Drug B (Advanced),50mg weekly,2021-09-13,N/A,Active,FALSE
+MED0050,PAT022,Drug A (Conservative),20mg daily,2026-01-12,N/A,Active,FALSE
+MED0051,PAT028,Metformin,500mg twice daily,2023-05-11,N/A,Active,FALSE
+MED0052,PAT029,Drug B (Advanced),50mg weekly,2022-01-19,2022-11-09,Discontinued,FALSE
+MED0053,PAT013,Drug B (Advanced),50mg weekly,2026-05-25,2026-09-30,Discontinued,FALSE
+MED0054,PAT003,Drug B (Advanced),50mg weekly,2023-01-23,2023-04-15,Discontinued,FALSE
+MED0055,PAT008,Drug A (Conservative),20mg daily,2022-05-31,2022-11-10,Discontinued,TRUE
+MED0056,PAT029,Lisinopril,10mg daily,2022-02-07,N/A,Active,FALSE
+MED0057,PAT028,Drug B (Advanced),50mg weekly,2025-12-12,2026-11-23,Discontinued,FALSE
+MED0058,PAT026,Lisinopril,10mg daily,2026-01-17,N/A,Active,FALSE
+MED0059,PAT021,Metformin,500mg twice daily,2024-03-05,N/A,Active,FALSE
+MED0060,PAT004,Drug B (Advanced),50mg weekly,2025-09-11,2025-11-12,Discontinued,FALSE
+MED0061,PAT025,Ibuprofen,400mg as needed,2026-02-01,N/A,Active,FALSE
+MED0062,PAT017,Ibuprofen,400mg as needed,2026-02-01,N/A,Active,FALSE
+MED0063,PAT007,Ibuprofen,400mg as needed,2024-09-09,2025-01-24,Discontinued,FALSE
+MED0064,PAT022,Metformin,500mg twice daily,2021-11-02,N/A,Active,FALSE
+MED0065,PAT005,Drug B (Advanced),50mg weekly,2024-03-01,N/A,Active,FALSE
+MED0066,PAT003,Lisinopril,10mg daily,2023-06-14,N/A,Active,FALSE
+MED0067,PAT020,Ibuprofen,400mg as needed,2024-03-18,2024-08-07,Discontinued,FALSE
+MED0068,PAT010,Metformin,500mg twice daily,2023-06-03,2023-08-21,Discontinued,FALSE
+MED0069,PAT017,Metformin,500mg twice daily,2025-02-19,2025-06-30,Discontinued,FALSE
+MED0070,PAT021,Drug A (Conservative),20mg daily,2023-08-30,2023-12-28,Discontinued,TRUE
+MED0071,PAT018,Metformin,500mg twice daily,2022-05-31,2022-10-27,Discontinued,FALSE
+MED0072,PAT010,Metformin,500mg twice daily,2024-03-31,N/A,Active,FALSE
+MED0073,PAT014,Lisinopril,10mg daily,2026-04-14,N/A,Active,FALSE
+MED0074,PAT026,Ibuprofen,400mg as needed,2023-01-29,N/A,Active,FALSE
+MED0075,PAT020,Drug A (Conservative),20mg daily,2024-10-26,2025-01-07,Discontinued,TRUE
+MED0076,PAT021,Ibuprofen,400mg as needed,2021-02-20,N/A,Active,FALSE
+MED0077,PAT005,Drug B (Advanced),50mg weekly,2023-05-13,2023-11-12,Discontinued,FALSE
+MED0078,PAT001,Ibuprofen,400mg as needed,2026-03-15,2026-12-25,Discontinued,FALSE
+MED0079,PAT010,Ibuprofen,400mg as needed,2021-08-19,N/A,Active,FALSE
+MED0080,PAT023,Drug A (Conservative),20mg daily,2021-10-28,N/A,Active,FALSE
+MED0081,PAT004,Ibuprofen,400mg as needed,2024-06-15,N/A,Active,FALSE
+MED0082,PAT001,Drug B (Advanced),50mg weekly,2025-05-18,N/A,Active,FALSE
+MED0083,PAT004,Drug A (Conservative),20mg daily,2025-10-27,2026-09-16,Discontinued,TRUE
+MED0084,PAT026,Drug B (Advanced),50mg weekly,2021-12-03,2022-11-20,Discontinued,FALSE
+MED0085,PAT024,Drug A (Conservative),20mg daily,2021-05-22,2021-12-27,Discontinued,TRUE
+MED0086,PAT018,Drug A (Conservative),20mg daily,2022-05-18,N/A,Active,FALSE
+MED0087,PAT009,Drug B (Advanced),50mg weekly,2021-10-19,N/A,Active,FALSE
+MED0088,PAT011,Lisinopril,10mg daily,2022-10-03,2023-03-17,Discontinued,FALSE
+MED0089,PAT023,Drug B (Advanced),50mg weekly,2022-09-01,N/A,Active,FALSE
+MED0090,PAT010,Drug A (Conservative),20mg daily,2025-09-04,N/A,Active,FALSE
+MED0091,PAT008,Metformin,500mg twice daily,2022-07-13,2022-12-26,Discontinued,FALSE
+MED0092,PAT004,Drug A (Conservative),20mg daily,2023-07-23,2023-09-05,Discontinued,TRUE
+MED0093,PAT025,Lisinopril,10mg daily,2021-03-20,N/A,Active,FALSE
+MED0094,PAT029,Ibuprofen,400mg as needed,2023-09-29,2024-06-14,Discontinued,FALSE
+MED0095,PAT012,Drug B (Advanced),50mg weekly,2024-07-02,2025-06-13,Discontinued,FALSE
+MED0096,PAT012,Drug A (Conservative),20mg daily,2025-10-16,2026-01-07,Discontinued,TRUE
+MED0097,PAT009,Drug B (Advanced),50mg weekly,2025-05-24,N/A,Active,FALSE
+MED0098,PAT028,Drug A (Conservative),20mg daily,2022-12-21,2023-07-12,Discontinued,TRUE
+MED0099,PAT023,Drug B (Advanced),50mg weekly,2024-06-07,N/A,Active,FALSE
+MED0100,PAT003,Drug B (Advanced),50mg weekly,2022-12-25,2023-07-04,Discontinued,FALSE

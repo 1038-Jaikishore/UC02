@@ -1,0 +1,41 @@
+equipment_id,patient_id,equipment_type,date_issued,expected_replacement_date,current_status,usage_frequency,duplicate_request_flag
+EQ0001,PAT012,Blood Glucose Monitor,2025-03-01,2026-03-01,Active (Overdue),As needed,FALSE
+EQ0002,PAT009,Wheelchair,2021-11-06,2026-11-05,Active,As needed,FALSE
+EQ0003,PAT002,Wheelchair,2021-07-22,2026-07-21,Active (Overdue),As needed,FALSE
+EQ0004,PAT006,Oxygen Tank,2026-02-27,2027-02-27,Active,Daily,FALSE
+EQ0005,PAT006,Blood Glucose Monitor,2026-02-26,2027-02-26,Active,As needed,FALSE
+EQ0006,PAT009,CPAP Machine,2025-07-09,2030-07-08,Active,As needed,FALSE
+EQ0007,PAT009,Crutches,2025-12-19,2026-03-19,Returned,As needed,FALSE
+EQ0008,PAT010,Wheelchair,2023-11-25,2028-11-23,Active,As needed,FALSE
+EQ0009,PAT023,Oxygen Tank,2024-07-11,2025-07-11,Returned,Weekly,FALSE
+EQ0010,PAT004,Oxygen Tank,2023-02-27,2024-02-27,Returned,Daily,FALSE
+EQ0011,PAT015,Oxygen Tank,2023-10-16,2024-10-15,Replaced,As needed,FALSE
+EQ0012,PAT026,Blood Glucose Monitor,2024-08-01,2025-08-01,Replaced,As needed,FALSE
+EQ0013,PAT001,Crutches,2023-02-22,2023-05-23,Replaced,As needed,FALSE
+EQ0014,PAT006,CPAP Machine,2022-01-16,2027-01-15,Active,Daily,FALSE
+EQ0015,PAT013,Oxygen Tank,2026-01-23,2027-01-23,Active,Daily,FALSE
+EQ0016,PAT025,Wheelchair,2023-12-26,2028-12-24,Active,As needed,FALSE
+EQ0017,PAT001,CPAP Machine,2023-01-03,2028-01-02,Active,As needed,FALSE
+EQ0018,PAT013,Wheelchair,2021-12-29,2026-12-28,Active,As needed,FALSE
+EQ0019,PAT004,Blood Glucose Monitor,2026-01-16,2027-01-16,Active,Weekly,FALSE
+EQ0020,PAT004,Oxygen Tank,2022-11-03,2023-11-03,Replaced,As needed,FALSE
+EQ0021,PAT006,CPAP Machine,2021-03-20,2026-03-19,Returned,Daily,FALSE
+EQ0022,PAT025,Crutches,2022-02-17,2022-05-18,Returned,As needed,FALSE
+EQ0023,PAT018,Wheelchair,2024-10-15,2029-10-14,Active,Weekly,FALSE
+EQ0024,PAT023,Oxygen Tank,2023-04-20,2024-04-19,Replaced,Weekly,FALSE
+EQ0025,PAT004,Oxygen Tank,2023-04-04,2024-04-03,Returned,As needed,FALSE
+EQ0026,PAT022,CPAP Machine,2022-03-30,2027-03-29,Active,Weekly,FALSE
+EQ0027,PAT019,Wheelchair,2022-09-04,2027-09-03,Active,As needed,FALSE
+EQ0028,PAT017,Wheelchair,2025-12-31,2030-12-30,Active,Weekly,FALSE
+EQ0029,PAT010,Wheelchair,2022-10-05,2027-10-04,Active,As needed,FALSE
+EQ0030,PAT017,CPAP Machine,2023-12-19,2028-12-17,Active,Weekly,FALSE
+EQ0031,PAT020,Wheelchair,2021-09-10,2026-09-09,Active,Weekly,FALSE
+EQ0032,PAT030,Crutches,2021-05-25,2021-08-23,Returned,As needed,FALSE
+EQ0033,PAT018,Crutches,2021-04-14,2021-07-13,Active (Overdue),As needed,FALSE
+EQ0034,PAT011,Oxygen Tank,2021-04-14,2022-04-14,Returned,Weekly,FALSE
+EQ0035,PAT024,Oxygen Tank,2023-10-10,2024-10-09,Active (Overdue),Daily,FALSE
+EQ0036,PAT026,Wheelchair,2024-07-24,2029-07-23,Active,Weekly,FALSE
+EQ0037,PAT019,Oxygen Tank,2022-06-02,2023-06-02,Active (Overdue),Daily,FALSE
+EQ0038,PAT023,Crutches,2025-07-05,2025-10-03,Active (Overdue),As needed,FALSE
+EQ0039,PAT012,Wheelchair,2024-03-29,2029-03-28,Active,As needed,FALSE
+EQ0040,PAT004,Oxygen Tank,2021-10-18,2022-10-18,Replaced,Daily,FALSE

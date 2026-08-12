@@ -1,0 +1,51 @@
+surgery_id,patient_id,provider_id,surgery_type,surgery_date,surgical_outcome,related_interventions,necessity_evaluation_support
+SURG0001,PAT017,PRV010,Cataract Surgery,2024-05-30,Complications,None,NO
+SURG0002,PAT015,PRV001,Spinal Fusion,2022-12-19,Successful,Physical Therapy,YES
+SURG0003,PAT023,PRV015,Cataract Surgery,2024-07-11,Successful,None,NO
+SURG0004,PAT008,PRV002,Spinal Fusion,2024-01-20,Pending Recovery,Physical Therapy,YES
+SURG0005,PAT027,PRV011,Knee Replacement,2026-01-08,Successful,Physical Therapy,YES
+SURG0006,PAT007,PRV005,Cataract Surgery,2024-05-11,Pending Recovery,None,NO
+SURG0007,PAT022,PRV002,Hernia Repair,2023-02-11,Pending Recovery,None,NO
+SURG0008,PAT023,PRV009,Spinal Fusion,2024-01-17,Pending Recovery,Physical Therapy,YES
+SURG0009,PAT014,PRV006,Knee Replacement,2024-02-13,Pending Recovery,Physical Therapy,YES
+SURG0010,PAT005,PRV006,Knee Replacement,2025-02-09,Successful,Physical Therapy,YES
+SURG0011,PAT004,PRV015,Cataract Surgery,2025-03-15,Successful,None,NO
+SURG0012,PAT014,PRV015,Appendectomy,2025-11-10,Complications,None,NO
+SURG0013,PAT021,PRV014,Spinal Fusion,2025-09-07,Successful,Physical Therapy,YES
+SURG0014,PAT001,PRV007,Hernia Repair,2025-05-24,Successful,None,NO
+SURG0015,PAT014,PRV011,Cataract Surgery,2024-07-12,Successful,None,NO
+SURG0016,PAT015,PRV002,Spinal Fusion,2026-05-02,Complications,Physical Therapy,YES
+SURG0017,PAT001,PRV009,Spinal Fusion,2025-04-17,Pending Recovery,Physical Therapy,YES
+SURG0018,PAT009,PRV005,Spinal Fusion,2024-03-28,Successful,Physical Therapy,YES
+SURG0019,PAT029,PRV005,Cataract Surgery,2022-12-18,Complications,None,NO
+SURG0020,PAT022,PRV007,Spinal Fusion,2023-12-04,Successful,Physical Therapy,YES
+SURG0021,PAT004,PRV015,Hernia Repair,2024-05-11,Pending Recovery,None,NO
+SURG0022,PAT012,PRV010,Hernia Repair,2023-11-09,Pending Recovery,None,NO
+SURG0023,PAT020,PRV008,Knee Replacement,2025-03-30,Successful,Physical Therapy,YES
+SURG0024,PAT007,PRV009,Cataract Surgery,2026-01-01,Successful,None,NO
+SURG0025,PAT024,PRV009,Hernia Repair,2025-09-12,Successful,None,NO
+SURG0026,PAT013,PRV012,Hernia Repair,2024-09-27,Pending Recovery,None,NO
+SURG0027,PAT015,PRV009,Spinal Fusion,2023-10-10,Pending Recovery,Physical Therapy,YES
+SURG0028,PAT028,PRV015,Cataract Surgery,2023-11-18,Successful,None,NO
+SURG0029,PAT026,PRV001,Hernia Repair,2024-11-13,Successful,None,NO
+SURG0030,PAT022,PRV012,Knee Replacement,2026-02-14,Successful,Physical Therapy,YES
+SURG0031,PAT021,PRV012,Hernia Repair,2023-12-22,Successful,None,NO
+SURG0032,PAT006,PRV003,Hernia Repair,2026-05-14,Complications,None,NO
+SURG0033,PAT015,PRV012,Hernia Repair,2026-03-15,Complications,None,NO
+SURG0034,PAT011,PRV013,Cataract Surgery,2025-08-01,Successful,None,NO
+SURG0035,PAT010,PRV013,Knee Replacement,2024-03-18,Successful,Physical Therapy,YES
+SURG0036,PAT021,PRV001,Knee Replacement,2025-09-05,Successful,Physical Therapy,YES
+SURG0037,PAT003,PRV014,Spinal Fusion,2026-01-26,Pending Recovery,Physical Therapy,YES
+SURG0038,PAT030,PRV004,Knee Replacement,2025-02-12,Pending Recovery,Physical Therapy,YES
+SURG0039,PAT020,PRV010,Hernia Repair,2022-10-24,Successful,None,NO
+SURG0040,PAT005,PRV009,Appendectomy,2026-01-20,Successful,None,NO
+SURG0041,PAT029,PRV005,Cataract Surgery,2024-04-06,Pending Recovery,None,NO
+SURG0042,PAT011,PRV001,Appendectomy,2023-08-23,Successful,None,NO
+SURG0043,PAT016,PRV010,Knee Replacement,2026-01-25,Complications,Physical Therapy,YES
+SURG0044,PAT019,PRV013,Hernia Repair,2026-04-11,Successful,None,NO
+SURG0045,PAT015,PRV012,Knee Replacement,2023-11-27,Successful,Physical Therapy,YES
+SURG0046,PAT020,PRV007,Hernia Repair,2022-11-09,Successful,None,NO
+SURG0047,PAT011,PRV014,Knee Replacement,2022-09-22,Complications,Physical Therapy,YES
+SURG0048,PAT015,PRV013,Knee Replacement,2025-04-25,Complications,Physical Therapy,YES
+SURG0049,PAT028,PRV001,Cataract Surgery,2023-01-19,Successful,None,NO
+SURG0050,PAT030,PRV006,Appendectomy,2025-07-10,Successful,None,NO

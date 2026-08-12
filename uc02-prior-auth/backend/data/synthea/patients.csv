@@ -1,0 +1,41 @@
+patient_id,first_name,last_name,dob,age,gender,insurance_plan,member_id,summary_card_text
+PAT001,FirstName1,LastName1,1955-07-06,71,M,Aetna HMO,MEM997044,Patient: PAT001 | Age: 71 | Coverage: Aetna HMO
+PAT002,FirstName2,LastName2,1961-10-26,64,F,Cigna,MEM436157,Patient: PAT002 | Age: 64 | Coverage: Cigna
+PAT003,FirstName3,LastName3,1971-06-13,55,F,Medicaid,MEM775921,Patient: PAT003 | Age: 55 | Coverage: Medicaid
+PAT004,FirstName4,LastName4,1983-03-10,43,F,BlueCross PPO,MEM651249,Patient: PAT004 | Age: 43 | Coverage: BlueCross PPO
+PAT005,FirstName5,LastName5,1960-09-18,65,F,Cigna,MEM608634,Patient: PAT005 | Age: 65 | Coverage: Cigna
+PAT006,FirstName6,LastName6,1966-02-16,60,M,Medicaid,MEM417885,Patient: PAT006 | Age: 60 | Coverage: Medicaid
+PAT007,FirstName7,LastName7,1957-07-13,69,M,Cigna,MEM413953,Patient: PAT007 | Age: 69 | Coverage: Cigna
+PAT008,FirstName8,LastName8,1965-10-25,60,M,Aetna HMO,MEM531859,Patient: PAT008 | Age: 60 | Coverage: Aetna HMO
+PAT009,FirstName9,LastName9,1997-02-15,29,M,Medicare Advantage,MEM158503,Patient: PAT009 | Age: 29 | Coverage: Medicare Advantage
+PAT010,FirstName10,LastName10,1946-03-30,80,M,Aetna HMO,MEM447420,Patient: PAT010 | Age: 80 | Coverage: Aetna HMO
+PAT011,FirstName11,LastName11,1979-06-10,47,F,Medicaid,MEM683981,Patient: PAT011 | Age: 47 | Coverage: Medicaid
+PAT012,FirstName12,LastName12,1974-10-03,51,F,Cigna,MEM744386,Patient: PAT012 | Age: 51 | Coverage: Cigna
+PAT013,FirstName13,LastName13,1952-03-03,74,F,BlueCross PPO,MEM700914,Patient: PAT013 | Age: 74 | Coverage: BlueCross PPO
+PAT014,FirstName14,LastName14,1935-10-21,90,F,Medicaid,MEM945643,Patient: PAT014 | Age: 90 | Coverage: Medicaid
+PAT015,FirstName15,LastName15,1952-07-10,74,F,Medicaid,MEM965009,Patient: PAT015 | Age: 74 | Coverage: Medicaid
+PAT016,FirstName16,LastName16,1957-12-03,68,M,Medicare Advantage,MEM869570,Patient: PAT016 | Age: 68 | Coverage: Medicare Advantage
+PAT017,FirstName17,LastName17,1940-02-16,86,M,Aetna HMO,MEM309356,Patient: PAT017 | Age: 86 | Coverage: Aetna HMO
+PAT018,FirstName18,LastName18,1992-01-10,34,M,Medicare Advantage,MEM288993,Patient: PAT018 | Age: 34 | Coverage: Medicare Advantage
+PAT019,FirstName19,LastName19,1963-03-19,63,F,Cigna,MEM580500,Patient: PAT019 | Age: 63 | Coverage: Cigna
+PAT020,FirstName20,LastName20,1954-01-04,72,F,Cigna,MEM874786,Patient: PAT020 | Age: 72 | Coverage: Cigna
+PAT021,FirstName21,LastName21,1961-12-29,64,F,Aetna HMO,MEM885407,Patient: PAT021 | Age: 64 | Coverage: Aetna HMO
+PAT022,FirstName22,LastName22,1956-02-18,70,M,BlueCross PPO,MEM165033,Patient: PAT022 | Age: 70 | Coverage: BlueCross PPO
+PAT023,FirstName23,LastName23,1974-02-21,52,M,Medicaid,MEM130599,Patient: PAT023 | Age: 52 | Coverage: Medicaid
+PAT024,FirstName24,LastName24,1982-07-25,44,M,Aetna HMO,MEM505086,Patient: PAT024 | Age: 44 | Coverage: Aetna HMO
+PAT025,FirstName25,LastName25,1994-11-22,31,M,Medicaid,MEM571938,Patient: PAT025 | Age: 31 | Coverage: Medicaid
+PAT026,FirstName26,LastName26,1986-09-16,39,M,Medicare Advantage,MEM400486,Patient: PAT026 | Age: 39 | Coverage: Medicare Advantage
+PAT027,FirstName27,LastName27,1960-05-06,66,F,Cigna,MEM656735,Patient: PAT027 | Age: 66 | Coverage: Cigna
+PAT028,FirstName28,LastName28,1966-03-11,60,M,Medicaid,MEM379336,Patient: PAT028 | Age: 60 | Coverage: Medicaid
+PAT029,FirstName29,LastName29,1975-04-25,51,F,Cigna,MEM655053,Patient: PAT029 | Age: 51 | Coverage: Cigna
+PAT030,FirstName30,LastName30,2005-01-04,21,F,Medicaid,MEM335408,Patient: PAT030 | Age: 21 | Coverage: Medicaid
+PAT031,FirstName31,LastName31,2007-11-21,18,F,Medicaid,MEM498566,Patient: PAT031 | Age: 18 | Coverage: Medicaid
+PAT032,FirstName32,LastName32,1945-12-12,80,F,Cigna,MEM248989,Patient: PAT032 | Age: 80 | Coverage: Cigna
+PAT033,FirstName33,LastName33,1958-07-03,68,M,Aetna HMO,MEM915770,Patient: PAT033 | Age: 68 | Coverage: Aetna HMO
+PAT034,FirstName34,LastName34,1958-11-27,67,M,Medicaid,MEM509074,Patient: PAT034 | Age: 67 | Coverage: Medicaid
+PAT035,FirstName35,LastName35,1965-10-04,60,F,BlueCross PPO,MEM869231,Patient: PAT035 | Age: 60 | Coverage: BlueCross PPO
+PAT036,FirstName36,LastName36,1958-03-01,68,F,BlueCross PPO,MEM169665,Patient: PAT036 | Age: 68 | Coverage: BlueCross PPO
+PAT037,FirstName37,LastName37,1961-06-03,65,F,Aetna HMO,MEM980771,Patient: PAT037 | Age: 65 | Coverage: Aetna HMO
+PAT038,FirstName38,LastName38,1956-02-18,70,F,Medicaid,MEM132831,Patient: PAT038 | Age: 70 | Coverage: Medicaid
+PAT039,FirstName39,LastName39,1969-04-26,57,F,Medicaid,MEM622618,Patient: PAT039 | Age: 57 | Coverage: Medicaid
+PAT040,FirstName40,LastName40,1941-01-08,85,F,Aetna HMO,MEM506508,Patient: PAT040 | Age: 85 | Coverage: Aetna HMO

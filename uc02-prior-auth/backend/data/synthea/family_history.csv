@@ -1,0 +1,41 @@
+history_id,patient_id,family_member_relation,condition,age_of_onset,genetic_risk_indicator
+FH0001,PAT001,Father,Hypertension,68,Medium
+FH0002,PAT028,Father,Breast Cancer,39,High
+FH0003,PAT008,Maternal Grandmother,Type 2 Diabetes,54,Medium
+FH0004,PAT006,Father,Alzheimer's Disease,74,High
+FH0005,PAT021,Father,Breast Cancer,62,High
+FH0006,PAT004,Sibling,Alzheimer's Disease,74,High
+FH0007,PAT020,Paternal Grandfather,Alzheimer's Disease,52,High
+FH0008,PAT023,Sibling,Alzheimer's Disease,47,High
+FH0009,PAT005,Mother,Heart Disease,72,High
+FH0010,PAT015,Paternal Grandfather,Heart Disease,59,High
+FH0011,PAT027,Sibling,Heart Disease,69,High
+FH0012,PAT014,Maternal Grandmother,Hypertension,69,Medium
+FH0013,PAT011,Sibling,Heart Disease,49,High
+FH0014,PAT018,Mother,Breast Cancer,58,High
+FH0015,PAT008,Sibling,Heart Disease,45,High
+FH0016,PAT013,Father,Heart Disease,66,High
+FH0017,PAT014,Maternal Grandmother,Alzheimer's Disease,55,High
+FH0018,PAT013,Father,Breast Cancer,62,High
+FH0019,PAT003,Maternal Grandmother,Heart Disease,44,High
+FH0020,PAT008,Mother,Type 2 Diabetes,38,Medium
+FH0021,PAT004,Mother,Breast Cancer,64,High
+FH0022,PAT012,Sibling,Heart Disease,40,High
+FH0023,PAT018,Father,Hypertension,68,Medium
+FH0024,PAT004,Sibling,Heart Disease,46,High
+FH0025,PAT005,Sibling,Alzheimer's Disease,41,High
+FH0026,PAT023,Father,Type 2 Diabetes,55,Medium
+FH0027,PAT025,Maternal Grandmother,Alzheimer's Disease,67,High
+FH0028,PAT020,Father,Hypertension,53,Medium
+FH0029,PAT014,Father,Hypertension,49,Medium
+FH0030,PAT001,Father,Hypertension,73,Medium
+FH0031,PAT002,Paternal Grandfather,Breast Cancer,36,High
+FH0032,PAT005,Maternal Grandmother,Breast Cancer,66,High
+FH0033,PAT022,Father,Type 2 Diabetes,40,Medium
+FH0034,PAT023,Mother,Heart Disease,75,High
+FH0035,PAT007,Maternal Grandmother,Heart Disease,49,High
+FH0036,PAT007,Sibling,Breast Cancer,57,High
+FH0037,PAT006,Maternal Grandmother,Breast Cancer,44,High
+FH0038,PAT027,Father,Heart Disease,58,High
+FH0039,PAT009,Father,Breast Cancer,58,High
+FH0040,PAT023,Sibling,Hypertension,55,Medium

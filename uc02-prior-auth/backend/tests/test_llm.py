@@ -53,7 +53,8 @@ async def test_generate_response_success(mock_openai_class, monkeypatch):
         extra_headers={
             "HTTP-Referer": "https://github.com/1038-Jaikishore/UC02",
             "X-Title": "Prior Auth Triage Companion"
-        }
+        },
+        max_tokens=1000
     )
 
 @pytest.mark.anyio

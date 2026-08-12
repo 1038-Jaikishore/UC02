@@ -74,7 +74,7 @@ def get_llm_client() -> AsyncOpenAI:
     )
 
 
-async def generate_response(messages: list, response_format: str = None) -> str:
+async def generate_response(messages: list, response_format: str = None, max_tokens: int = 1000) -> str:
     """
     Generates a response from the configured LLM provider asynchronously.
     Translates library exceptions into structured custom exceptions.
@@ -101,7 +101,8 @@ async def generate_response(messages: list, response_format: str = None) -> str:
         completion_args = {
             "model": config["model"],
             "messages": messages,
-            "extra_headers": extra_headers
+            "extra_headers": extra_headers,
+            "max_tokens": max_tokens
         }
         
         # OpenRouter/OpenAI structured JSON format support if requested

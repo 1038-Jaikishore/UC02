@@ -9,6 +9,9 @@ logger = logging.getLogger(__name__)
 
 # Metadata regex patterns
 EFFECTIVE_DATE_PATTERN = re.compile(r"Effective\s+Date:\s*([^\n\r]+)", re.IGNORECASE)
+CPT_PATTERN = re.compile(r"\b\d{5}\b")
+HCPCS_PATTERN = re.compile(r"\b[A-Z]\d{4}\b")
+
 
 def parse_policy_pdf(filepath: str, payer: str) -> List[ParsedPage]:
     """
@@ -90,6 +93,16 @@ def parse_policy_pdf(filepath: str, payer: str) -> List[ParsedPage]:
                     f"Warning: Page {page_index} of policy '{filename}' is empty."
                 )
                 
+        # Scan and clean codes
+        cpt_raw = CPT_PATTERN.findall(text)
+        hcpcs_raw = HCPCS_PATTERN.findall(text)
+        
+        cpt_codes = set()
+        for c in cpt_raw:
+            if c.startswith("0000") or c in ["2026", "2025", "2024", "2023", "2022", "2021", "2020", "2019", "2018", "12000", "50000", "90000"]:
+                continue
+            cpt_codes.add(c)
+
         parsed_pages.append(ParsedPage(
             payer=payer,
             policy_name=policy_name,
@@ -98,7 +111,9 @@ def parse_policy_pdf(filepath: str, payer: str) -> List[ParsedPage]:
             source_file=filename,
             page_number=page_index,
             text=text,
-            scanned=scanned
+            scanned=scanned,
+            cpt_codes=sorted(list(cpt_codes)),
+            hcpcs_codes=sorted(list(set(hcpcs_raw)))
         ))
 
     doc.close()

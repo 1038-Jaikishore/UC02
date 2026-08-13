@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, List
 
 class ParsedPage(BaseModel):
     payer: str
@@ -10,6 +10,8 @@ class ParsedPage(BaseModel):
     page_number: int  # 1-indexed
     text: str
     scanned: bool = False
+    cpt_codes: List[str] = []
+    hcpcs_codes: List[str] = []
 
     model_config = {
         "from_attributes": True
@@ -26,6 +28,8 @@ class PolicyChunk(BaseModel):
     section: str
     text: str
     chunk_index: int
+    cpt_codes: List[str] = []
+    hcpcs_codes: List[str] = []
 
     model_config = {
         "from_attributes": True

@@ -140,7 +140,9 @@ def chunk_page(page: ParsedPage, start_index: int) -> List[PolicyChunk]:
                 page_number=page.page_number,
                 section=seg["section"],
                 text=sub_t,
-                chunk_index=current_idx
+                chunk_index=current_idx,
+                cpt_codes=page.cpt_codes,
+                hcpcs_codes=page.hcpcs_codes
             ))
             current_idx += 1
 

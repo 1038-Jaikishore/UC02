@@ -20,11 +20,15 @@ async def retrieve_relevant_policies(
     cpt_code: Optional[str] = None,
     hcpcs_code: Optional[str] = None,
     clinical_context: Optional[str] = "",
-    k: int = 5
+    k: int = 5,
+    threshold: float = SIMILARITY_THRESHOLD,
+    suppress_duplicates: bool = True,
+    section_filter: Optional[List[str]] = None,
+    policy_id_filter: Optional[List[str]] = None
 ) -> RetrievalResult:
     """
     Retrieves and ranks relevant medical policy chunks for a given request.
-    Enforces payer isolation, structured CPT/HCPCS boosting, and similarity thresholds.
+    Enforces payer isolation, structured CPT/HCPCS boosting, metadata filters, deduplication, and thresholds.
     """
     # 1. Enforce Unknown Payer Check
     if not payer or payer.strip().lower() not in ["anthem", "uhc"]:
@@ -32,7 +36,6 @@ async def retrieve_relevant_policies(
         return RetrievalResult(status="PAYER_UNKNOWN", chunks=[])
 
     # 2. Formulate query string
-    # E.g. "Lumbar MRI medical necessity coverage criteria chronic lower back pain CPT 72148"
     query_parts = [procedure, "medical necessity coverage criteria", diagnosis]
     if cpt_code:
         query_parts.append(f"CPT {cpt_code}")
@@ -44,13 +47,12 @@ async def retrieve_relevant_policies(
     query_text = " ".join(query_parts).strip()
     logger.info(f"RAG Retrieval Query for payer '{payer}': {query_text}")
 
-    # Retrieve candidate chunks (fetch more to allow payer filtering & code boosting)
+    # Retrieve candidate chunks (fetch more to allow filters and deduplication)
     raw_results = await search_vector_store(query_text, k=30)
     if not raw_results:
         return RetrievalResult(status="INSUFFICIENT_POLICY_EVIDENCE", chunks=[])
 
     # 3. Payer Isolation Filter
-    # Only keep chunks belonging strictly to the requested payer
     payer_filtered = []
     for chunk, score in raw_results:
         if chunk.source_name.lower() == payer.strip().lower():
@@ -60,8 +62,26 @@ async def retrieve_relevant_policies(
         logger.warning(f"No policy chunks found matching payer '{payer}'.")
         return RetrievalResult(status="INSUFFICIENT_POLICY_EVIDENCE", chunks=[])
 
-    # 4. Structured Code Boosting & Ranking
-    # Boost chunks that explicitly list the CPT or HCPCS code in their metadata or text
+    # 4. Optional Metadata Filters
+    if section_filter:
+        section_filter_lower = [s.lower() for s in section_filter]
+        payer_filtered = [
+            (chunk, score) for chunk, score in payer_filtered 
+            if chunk.section.lower() in section_filter_lower
+        ]
+
+    if policy_id_filter:
+        policy_id_filter_lower = [p_id.lower() for p_id in policy_id_filter if p_id]
+        payer_filtered = [
+            (chunk, score) for chunk, score in payer_filtered 
+            if chunk.policy_id and chunk.policy_id.lower() in policy_id_filter_lower
+        ]
+
+    if not payer_filtered:
+        logger.warning("No policy chunks match the specified metadata filters.")
+        return RetrievalResult(status="INSUFFICIENT_POLICY_EVIDENCE", chunks=[])
+
+    # 5. Structured Code Boosting & Ranking
     boosted_results = []
     for chunk, score in payer_filtered:
         boost = 0.0
@@ -85,10 +105,24 @@ async def retrieve_relevant_policies(
     # Sort candidates by boosted score descending
     boosted_results.sort(key=lambda x: x[1], reverse=True)
 
-    # 5. Threshold validation
+    # 6. Duplicate Suppression
+    if suppress_duplicates:
+        seen_texts = set()
+        deduplicated = []
+        for chunk, score in boosted_results:
+            norm_text = chunk.text.strip().lower()
+            if norm_text not in seen_texts:
+                seen_texts.add(norm_text)
+                deduplicated.append((chunk, score))
+        boosted_results = deduplicated
+
+    if not boosted_results:
+        return RetrievalResult(status="INSUFFICIENT_POLICY_EVIDENCE", chunks=[])
+
+    # 7. Threshold validation
     highest_score = boosted_results[0][1]
-    if highest_score < SIMILARITY_THRESHOLD:
-        logger.warning(f"Top matched chunk score ({highest_score:.3f}) is below threshold ({SIMILARITY_THRESHOLD}).")
+    if highest_score < threshold:
+        logger.warning(f"Top matched chunk score ({highest_score:.3f}) is below threshold ({threshold}).")
         return RetrievalResult(status="INSUFFICIENT_POLICY_EVIDENCE", chunks=[])
 
     # Return top k results
@@ -96,3 +130,4 @@ async def retrieve_relevant_policies(
         status="SUCCESS",
         chunks=boosted_results[:k]
     )
+

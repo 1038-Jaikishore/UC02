@@ -14,3 +14,19 @@ class ParsedPage(BaseModel):
     model_config = {
         "from_attributes": True
     }
+
+class PolicyChunk(BaseModel):
+    source_type: str = "PAYER"
+    source_name: str  # Anthem or UHC
+    policy_name: str
+    policy_id: Optional[str] = None
+    effective_date: Optional[str] = None
+    source_file: str
+    page_number: int
+    section: str
+    text: str
+    chunk_index: int
+
+    model_config = {
+        "from_attributes": True
+    }
